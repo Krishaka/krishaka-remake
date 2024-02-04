@@ -1,3 +1,5 @@
+import HomePageModule from "@/modules/home-page";
+
 export default function Home() {
-  return <p css={{ height: "200vh" }}>hello</p>;
+  return <HomePageModule />;
 }

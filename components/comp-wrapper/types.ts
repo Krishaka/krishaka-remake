@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export interface WrapperPropType {
   tag: string;
   children: ReactNode;
-  isPage?: boolean;
+  page?: string;
   wrapperStyles?: SerializedStyles;
   innerElemExtraStyles?: SerializedStyles;
 }

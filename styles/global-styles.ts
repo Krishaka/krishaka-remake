@@ -1,3 +1,4 @@
+import { mediaQuery } from "@/styles/media-query";
 import { css } from "@emotion/react";
 import { Inter } from "next/font/google";
 
@@ -22,8 +23,11 @@ export const globalStylesCss = css`
     --padding-normal: 50px;
     --padding-mid: 25px;
     --padding-small: 10px;
+    --padding-page-dw: 10vh;
+    --padding-page-mw: 5vh;
     --scrollbar-width: 5px;
     --footer-grid-col-width: 275px;
+    --banner-img-height: 350px;
 
     --color-bg-primary: #1d892c;
     --color-bg-secondary: #ffd93d;
@@ -32,6 +36,7 @@ export const globalStylesCss = css`
     --color-nav-bg: rgba(29, 137, 44, 0.4);
     --color-off-gray: hsla(0, 0%, 63%, 0.25);
     --color-text-default: #fefefe;
+    --color-text-dark: #111111;
   }
   * {
     margin: 0;
@@ -44,6 +49,9 @@ export const globalStylesCss = css`
     background-color: var(--color-bg);
     color: var(--color-text-default);
     padding-top: var(--header-height);
+    ${mediaQuery.mobileLandscape} {
+      --header-height: 17.5vh;
+    }
   }
   ::-webkit-scrollbar {
     width: var(--scrollbar-width);

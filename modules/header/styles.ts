@@ -16,6 +16,9 @@ export const headerWrapperCss = css`
   ${mediaQuery.tablet} {
     border-bottom: 1px solid var(--color-off-gray);
   }
+  ${mediaQuery.mobileLandscape} {
+    --header-height: 17.5vh;
+  }
 `;
 
 export const headerCss = css`
@@ -96,6 +99,12 @@ export const navCss = css`
     z-index: -1;
     &.nav-active {
       bottom: calc(-1 * var(--nav-height) - 10px);
+    }
+    ${mediaQuery.mobileLandscape} {
+      --nav-height: 75vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
     }
   }
 `;

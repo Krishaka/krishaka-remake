@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import {
   BsEnvelope,
   BsFacebook,
@@ -12,6 +13,12 @@ export const companyName = "Krishaka";
 export const companyTagLine = "A company that aspires to bring a change!";
 export const companyMail = "something@gmail.com";
 export const companyNumber = "+91-9999999999";
+
+// export const metaDescription =
+//   "Krishaka, an IIT Madras-backed agri-tech startup\
+// revolutionizing agriculture with award-winning, state-of-the-art products for sustainable farming.";
+
+export const metaData: Metadata = {};
 
 export const navList = [
   {

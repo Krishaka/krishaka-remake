@@ -1,3 +1,4 @@
+import { mediaQuery } from "@/styles/media-query";
 import { css } from "@emotion/react";
 
 export const footerCompanyInfoWrapperCss = css`
@@ -15,6 +16,9 @@ export const footerCompanyIDNameCss = css`
   font-weight: 600;
   color: var(--color-bg-secondary);
   margin-left: var(--padding-small);
+  ${mediaQuery.mobile} {
+    font-size: var(--font-size-icon);
+  }
 `;
 
 export const footerTaglineCss = css`
