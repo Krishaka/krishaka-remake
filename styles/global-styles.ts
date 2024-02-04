@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600", "800"]
+  weight: ["400", "600"]
 });
 
 export const globalStylesCss = css`
@@ -13,7 +13,7 @@ export const globalStylesCss = css`
 
     --max-width: 1440px;
     --header-height: 8vh;
-    --font-size-large: 4rem;
+    --font-size-large: 6.25vw;
     --font-size-med: 2.6rem;
     --font-size-small: 1.2rem;
     --font-size-default: 1rem;
@@ -28,6 +28,7 @@ export const globalStylesCss = css`
     --scrollbar-width: 5px;
     --footer-grid-col-width: 275px;
     --banner-img-height: 350px;
+    --line-height-extra: 1.5em;
 
     --color-bg-primary: #1d892c;
     --color-bg-secondary: #ffd93d;
@@ -46,12 +47,13 @@ export const globalStylesCss = css`
   }
   #__next {
     font-family: var(--font-default);
-    background-color: var(--color-bg);
     color: var(--color-text-default);
-    padding-top: var(--header-height);
     ${mediaQuery.mobileLandscape} {
       --header-height: 17.5vh;
     }
+  }
+  body {
+    background-color: var(--color-bg);
   }
   ::-webkit-scrollbar {
     width: var(--scrollbar-width);

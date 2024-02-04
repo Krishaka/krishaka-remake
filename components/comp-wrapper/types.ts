@@ -7,4 +7,5 @@ export interface WrapperPropType {
   page?: string;
   wrapperStyles?: SerializedStyles;
   innerElemExtraStyles?: SerializedStyles;
+  wrapperClassName?: string;
 }

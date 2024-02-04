@@ -10,6 +10,9 @@ export const commonPageWrapperCss = css`
   ${mediaQuery.mobileLandscape} {
     --pad-top: var(--padding-page-dw);
   }
+  &.page {
+    margin-top: var(--header-height);
+  }
 `;
 
 export const commonPageContainerCss = css`
@@ -21,5 +24,18 @@ export const commonPageContainerCss = css`
   }
   ${mediaQuery.mobile} {
     gap: var(--padding-mid);
+  }
+`;
+
+export const commonHeaderCss = (color?: string) => css`
+  color: ${color ? color : "var(--color-bg-secondary)"};
+  font-size: var(--font-size-med);
+  font-weight: 600;
+  margin-bottom: var(--padding-small);
+  ${mediaQuery.mobile} {
+    font-size: var(--font-size-icon);
+  }
+  ${mediaQuery.mobileLandscape} {
+    font-size: var(--font-size-icon);
   }
 `;

@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import {
   BsEnvelope,
   BsFacebook,
@@ -13,12 +12,8 @@ export const companyName = "Krishaka";
 export const companyTagLine = "A company that aspires to bring a change!";
 export const companyMail = "something@gmail.com";
 export const companyNumber = "+91-9999999999";
-
-// export const metaDescription =
-//   "Krishaka, an IIT Madras-backed agri-tech startup\
-// revolutionizing agriculture with award-winning, state-of-the-art products for sustainable farming.";
-
-export const metaData: Metadata = {};
+export const companyBrief =
+  "An innovative force in agriculture, standing at the forefront of revolutionizing the farming landscape with its cutting-edge products.";
 
 export const navList = [
   {
@@ -66,5 +61,32 @@ export const contactInfoList = [
     Icon: BsGeoAltFill,
     text: "Flat No XYZ, Locality ABC, Chennai - 62, IN",
     link: "https://maps.app.goo.gl/eU4qyhhoG6f8bFdH6"
+  }
+];
+
+export const teamData = [
+  {
+    name: "Nani Naresh",
+    position: "Head Of Content",
+    imageUrl: "/images/wallpaper.jpg",
+    link: "https://www.linkedin.com/feed/",
+    insta: "https://www.instagram.com/",
+    mail: companyMail
+  },
+  {
+    name: "Swami Suresh",
+    position: "Head Of Design",
+    imageUrl: "/images/wallpaper.jpg",
+    link: "https://www.linkedin.com/feed/",
+    insta: "https://www.instagram.com/",
+    mail: companyMail
+  },
+  {
+    name: "Manoj Mahesh",
+    position: "Cheif Technical Officer",
+    imageUrl: "/images/wallpaper.jpg",
+    link: "https://www.linkedin.com/feed/",
+    insta: "https://www.instagram.com/",
+    mail: companyMail
   }
 ];

@@ -1,11 +1,11 @@
 import { linkCtaBtnCss } from "@/components/link-cta-btn/styles";
+import { LinkCtaBtnProp } from "@/components/link-cta-btn/types";
 import Link from "next/link";
-import { PropsWithChildren } from "react";
 
-export default function LinkCtaBtn(props: PropsWithChildren) {
-  const { children } = props;
+export default function LinkCtaBtn(props: LinkCtaBtnProp) {
+  const { children, link, extraStyles } = props;
   return (
-    <Link href="/contact" css={linkCtaBtnCss}>
+    <Link href={`/${link}`} css={[linkCtaBtnCss, extraStyles]}>
       {children}
     </Link>
   );

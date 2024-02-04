@@ -19,6 +19,9 @@ export const footerCompanyIDNameCss = css`
   ${mediaQuery.mobile} {
     font-size: var(--font-size-icon);
   }
+  ${mediaQuery.mobileLandscape} {
+    font-size: var(--font-size-icon);
+  }
 `;
 
 export const footerTaglineCss = css`

@@ -6,12 +6,12 @@ import Head from "next/head";
 import { Ref, forwardRef } from "react";
 
 function CW(props: WrapperPropType, ref: Ref<HTMLDivElement>) {
-  const { children, tag, innerElemExtraStyles, wrapperStyles, page } = props;
+  const { children, tag, innerElemExtraStyles, wrapperStyles, page, wrapperClassName } = props;
 
   const innerElem = jsx(tag, { css: [innerElemCss, innerElemExtraStyles] }, children);
 
   return (
-    <div css={[outerElemCss, wrapperStyles]} ref={ref}>
+    <div css={[outerElemCss, wrapperStyles]} ref={ref} className={wrapperClassName}>
       {page && (
         <Head>
           <title>{`${page} | ${companyName}`}</title>
