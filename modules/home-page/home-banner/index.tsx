@@ -3,6 +3,7 @@ import CompWrapper from "@/components/comp-wrapper";
 import ImageWrapper from "@/components/image-wrapper";
 import LinkCtaBtn from "@/components/link-cta-btn";
 import {
+  bannerCtaBtnCss,
   bannerCtaContainerCss,
   bannerHeaderCss,
   bannerProductsImgCss,
@@ -22,7 +23,9 @@ export default function HomePageBanner() {
         <h2 css={homeBannerBriefCss}>{companyBrief}</h2>
         <div css={bannerCtaContainerCss}>
           <span className="cta-info">Check out our latest products</span>
-          <LinkCtaBtn link="products">Our Products</LinkCtaBtn>
+          <LinkCtaBtn link="products" extraStyles={bannerCtaBtnCss}>
+            Our Products
+          </LinkCtaBtn>
         </div>
       </main>
     </CompWrapper>

@@ -10,4 +10,5 @@ export const linkCtaBtnCss = css`
   outline: none;
   padding: var(--padding-small) var(--padding-mid);
   width: fit-content;
+  text-align: center;
 `;

@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600"]
+  weight: ["400", "600", "800"]
 });
 
 export const globalStylesCss = css`
@@ -29,6 +29,7 @@ export const globalStylesCss = css`
     --footer-grid-col-width: 275px;
     --banner-img-height: 350px;
     --line-height-extra: 1.5em;
+    --carosual-mid-width: 500px;
 
     --color-bg-primary: #1d892c;
     --color-bg-secondary: #ffd93d;

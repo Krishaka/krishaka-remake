@@ -46,6 +46,7 @@ export const homeBannerBriefCss = css`
   font-weight: 400;
   margin-bottom: var(--padding-normal);
   line-height: var(--line-height-extra);
+  font-size: var(--font-size-icon);
 `;
 
 export const bannerCtaContainerCss = css`
@@ -55,4 +56,8 @@ export const bannerCtaContainerCss = css`
   .cta-info {
     font-size: var(--font-size-icon);
   }
+`;
+
+export const bannerCtaBtnCss = css`
+  font-size: var(--font-size-small);
 `;

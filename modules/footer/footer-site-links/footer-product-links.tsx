@@ -4,10 +4,11 @@ import { footerColHeaderCss } from "@/modules/footer/styles";
 import Link from "next/link";
 
 export default function FooterProductsList() {
-  const productListMapper = (product: string, index: number) => {
+  const productListMapper = (product: (typeof productList)[0], index: number) => {
+    const { productName } = product;
     return (
-      <Link href={`/products/${product.replace(/ /g, "-")}`} key={`product-item-${index}`} css={footerListLinkCss}>
-        {product}
+      <Link href={`/products/${productName.replace(/ /g, "-")}`} key={`product-item-${index}`} css={footerListLinkCss}>
+        {productName}
       </Link>
     );
   };

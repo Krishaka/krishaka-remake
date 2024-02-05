@@ -34,7 +34,34 @@ export const navList = [
   }
 ];
 
-export const productList = ["product one", "product two", "product three"];
+// export const productList = ["product one", "product two", "product three"];
+
+export const productList = [
+  {
+    productName: "product one",
+    productImg: "/images/wallpaper.jpg",
+    productDesc:
+      "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
+      Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
+      agriculture, and sustainability."
+  },
+  {
+    productName: "product two",
+    productImg: "/images/wallpaper.jpg",
+    productDesc:
+      "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
+      Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
+      agriculture, and sustainability."
+  },
+  {
+    productName: "product three",
+    productImg: "/images/wallpaper.jpg",
+    productDesc:
+      "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
+      Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
+      agriculture, and sustainability."
+  }
+];
 
 export const socialIconsList = [
   { iconName: "instagram", Icon: BsInstagram, link: "/" },
