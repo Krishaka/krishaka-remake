@@ -19,6 +19,8 @@ export default function HomeCarousal() {
   const carousalRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const fontPixelWidth = useRef<number>(12.22);
+  const touchStartNum = useRef<number>(0);
+  const touchEndNum = useRef<number>(0);
 
   const scrollLength = useRef<number>(0);
   useEffect(() => {
@@ -50,6 +52,33 @@ export default function HomeCarousal() {
         classAdder(`product-item-${carousalItemNum.current - 1}`, rightArrow);
       }
     };
+    const touchStartCallback = (event: TouchEvent) => {
+      touchStartNum.current = event.changedTouches[0].pageX;
+    };
+    const touchEndCallback = (event: TouchEvent) => {
+      touchEndNum.current = event.changedTouches[0].pageX;
+      const touchDirection = touchStartNum.current - touchEndNum.current;
+      let num = 0;
+      if (touchDirection > 0) {
+        num = 1;
+      } else {
+        num = -1;
+      }
+      const numberCarousal = document.querySelector(".num-carousal");
+      const scrollNum = scrollLength.current ?? 0;
+      if (carousal) {
+        carousal.scrollTo({
+          left: carousal.scrollLeft + num * scrollNum,
+          behavior: "smooth"
+        });
+      }
+      if (numberCarousal) {
+        numberCarousal.scrollTo({
+          left: numberCarousal.scrollLeft + num * fontPixelWidth.current,
+          behavior: "smooth"
+        });
+      }
+    };
 
     const obv: IntersectionObserver = new IntersectionObserver(obvCallback, obvOptions);
 
@@ -59,11 +88,15 @@ export default function HomeCarousal() {
         obv.observe(carousalItem);
       }
     }
+    carousal?.addEventListener("touchstart", touchStartCallback);
+    carousal?.addEventListener("touchend", touchEndCallback);
     addEventListener("resize", resizeHandler);
 
     return () => {
       obv.disconnect();
       removeEventListener("resize", resizeHandler);
+      carousal?.removeEventListener("touchstart", touchStartCallback);
+      carousal?.removeEventListener("touchend", touchEndCallback);
     };
   }, []);
 

@@ -86,6 +86,7 @@ export const numCarousalWrapperCss = (num: string) => css`
   padding: 10px 0;
   display: flex;
   overflow-x: scroll;
+  touch-action: none;
   ::-webkit-scrollbar {
     height: 0;
   }
