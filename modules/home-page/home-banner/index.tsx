@@ -9,7 +9,7 @@ import {
   bannerProductsImgCss,
   homeBannerBriefCss,
   homeBannerContainerCss,
-  homeBannerCss,
+  homeBannerImgCss,
   mainCss
 } from "@/modules/home-page/home-banner/styles";
 
@@ -17,7 +17,7 @@ export default function HomePageBanner() {
   return (
     <CompWrapper tag="div" wrapperStyles={homeBannerContainerCss}>
       <ImageWrapper alt="-" src="/images/hero-products-dull.png" extraStyles={bannerProductsImgCss} />
-      <ImageWrapper alt="home" src="/images/wallpaper.jpg" extraStyles={homeBannerCss}></ImageWrapper>
+      <ImageWrapper alt="home" src="/images/wallpaper.jpg" extraStyles={homeBannerImgCss}></ImageWrapper>
       <main css={mainCss}>
         <h1 css={bannerHeaderCss}>{companyName}</h1>
         <h2 css={homeBannerBriefCss}>{companyBrief}</h2>

@@ -34,8 +34,6 @@ export const navList = [
   }
 ];
 
-// export const productList = ["product one", "product two", "product three"];
-
 export const productList = [
   {
     productName: "product one",

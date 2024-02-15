@@ -42,6 +42,9 @@ export const homeAboutTextWrapperCss = css`
 
 export const homeAboutDescCss = css`
   margin-bottom: var(--padding-mid);
+  ${mediaQuery.desktop} {
+    line-height: var(--line-height-large);
+  }
 `;
 
 export const homeAboutBtnCss = css`

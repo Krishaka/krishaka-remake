@@ -15,7 +15,6 @@ function CW(props: WrapperPropType, ref: Ref<HTMLDivElement>) {
       {page && (
         <Head>
           <title>{`${page} | ${companyName}`}</title>
-          {/* <meta name="description" content="Description goes here" /> */}
         </Head>
       )}
       {innerElem}

@@ -1,15 +1,7 @@
 import { productList } from "@/common-data";
-import ProductCard from "@/modules/home-page/home-carousal/product-card";
-import {
-  carousalArrowCss,
-  carousalContainerCss,
-  carousalTrackCss,
-  carousalWrapperCss,
-  homeCarousalCss,
-  itemCounterCss,
-  numCarousalWrapperCss,
-  numItemCss
-} from "@/modules/home-page/home-carousal/styles";
+import CarousalComp from "@/modules/home-page/home-carousal/carousal-comp";
+import CarousalCounter from "@/modules/home-page/home-carousal/carousal-counter";
+import { carousalArrowCss, carousalWrapperCss, homeCarousalCss } from "@/modules/home-page/home-carousal/styles";
 import { commonHeaderCss } from "@/styles/common-styles";
 import { useEffect, useRef } from "react";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
@@ -17,14 +9,13 @@ import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 export default function HomeCarousal() {
   const carousalItemNum = useRef<number>(productList.length);
   const carousalRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
   const fontPixelWidth = useRef<number>(12.22);
   const touchStartNum = useRef<number>(0);
   const touchEndNum = useRef<number>(0);
 
   const scrollLength = useRef<number>(0);
   useEffect(() => {
-    const track = trackRef.current;
+    const track = carousalRef.current?.querySelector(".carousal-track");
     const carousal = carousalRef.current;
     scrollLength.current = (track?.scrollWidth ?? 0) / carousalItemNum.current;
 
@@ -120,25 +111,6 @@ export default function HomeCarousal() {
     };
   };
 
-  const numberMapper = (_: unknown, index: number) => (
-    <span key={index} css={numItemCss}>
-      {index + 1}
-    </span>
-  );
-
-  const carousalMapper = (product: (typeof productList)[0], index: number) => {
-    const { productDesc, productImg, productName } = product;
-    return (
-      <ProductCard
-        cardCtaText="View Product"
-        cardDesc={productDesc}
-        cardHeading={productName}
-        imgSrc={productImg}
-        key={`product-item-` + index}
-        name={"product-item product-item-" + index}
-      />
-    );
-  };
   return (
     <div css={homeCarousalCss}>
       <h2 css={commonHeaderCss("var(--color-text-default)")}>Our Products</h2>
@@ -148,20 +120,10 @@ export default function HomeCarousal() {
           className="arrow left-arrow arrow-inactive"
           onClick={clickHandler(-1)}
         />
-        <div css={carousalContainerCss} ref={carousalRef}>
-          <div css={carousalTrackCss(carousalItemNum.current)} ref={trackRef}>
-            {productList.map(carousalMapper)}
-          </div>
-        </div>
+        <CarousalComp itemNum={carousalItemNum.current} ref={carousalRef} />
         <FaCircleChevronRight css={carousalArrowCss} className="arrow right-arrow" onClick={clickHandler(1)} />
       </div>
-      <div css={itemCounterCss}>
-        <div css={numCarousalWrapperCss(`${fontPixelWidth.current}px`)} className="num-carousal">
-          {Array(carousalItemNum.current).fill(null).map(numberMapper)}
-        </div>
-        <span>/</span>
-        <span>{carousalItemNum.current}</span>
-      </div>
+      <CarousalCounter fontSize={fontPixelWidth.current ?? 0} itemNum={carousalItemNum.current ?? 0} />
     </div>
   );
 }

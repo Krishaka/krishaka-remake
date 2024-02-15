@@ -6,15 +6,6 @@ import { useEffect, useRef } from "react";
 import Logo from "@/components/logo";
 import { SerializedStyles } from "@emotion/react";
 
-export const navListMapper = (navItem: (typeof navList)[0], index: number, linkCss: SerializedStyles) => {
-  const { link, navItemName } = navItem;
-  return (
-    <Link href={link} key={`nav-item-${index}`} css={linkCss}>
-      {navItemName}
-    </Link>
-  );
-};
-
 export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLDivElement>(null);
@@ -40,6 +31,16 @@ export default function Header() {
       hamburger.classList.toggle("hamburger-active");
     }
   };
+
+  const navListMapper = (navItem: (typeof navList)[0], index: number) => {
+    const { link, navItemName } = navItem;
+    return (
+      <Link href={link} key={`nav-item-${index}`} css={navItemCss} onClick={clickHandler}>
+        {navItemName}
+      </Link>
+    );
+  };
+
   return (
     <CompWrapper tag="header" innerElemExtraStyles={headerCss} wrapperStyles={headerWrapperCss} ref={headerRef}>
       <Logo height="75%" />
@@ -49,7 +50,7 @@ export default function Header() {
         <div className="hamburger-lines"></div>
       </div>
       <nav css={navCss} ref={navRef}>
-        {navList.map((navItem, index: number) => navListMapper(navItem, index, navItemCss))}
+        {navList.map(navListMapper)}
       </nav>
     </CompWrapper>
   );

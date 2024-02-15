@@ -34,6 +34,7 @@ export const footerHighlightTextCss = css`
   ${mediaQuery.tablet} {
     --fs: 17vw;
     margin: var(--padding-normal) 0 var(--padding-mid) 0;
+    font-weight: 800;
   }
 `;
 
