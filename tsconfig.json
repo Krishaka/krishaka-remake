@@ -17,6 +17,11 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "modules/home-page/home-canvas/three-js-canvas/building.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "modules/home-page/home-banner/home-canvas/three-js-canvas/building.tsx"
+  ],
   "exclude": ["node_modules"]
 }

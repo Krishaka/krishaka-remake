@@ -1,15 +1,22 @@
 import { mediaQuery } from "@/styles/media-query";
 import { css } from "@emotion/react";
 
-export const homeBannerContainerCss = css`
+export const homeBannerWrapperCss = css`
   height: 100vh;
   width: 100%;
-  position: relative;
   overflow: hidden;
   ${mediaQuery.tablet} {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+  }
+`;
+
+export const homeBannerContainerCss = css`
+  display: flex;
+  align-items: center;
+  ${mediaQuery.tablet} {
+    flex-direction: column;
   }
 `;
 
@@ -26,20 +33,23 @@ export const homeBannerImgCss = css`
 `;
 
 export const bannerProductsImgCss = css`
-  --img-height: 110%;
+  --img-height: 100px;
   height: var(--img-height);
   aspect-ratio: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
+  scale: 11;
+  transform-origin: left;
   img {
     object-fit: contain;
   }
+  ${mediaQuery.miniDesktop} {
+    --img-height: 65vh;
+    scale: 1.5;
+  }
   ${mediaQuery.tablet} {
+    order: -1;
     position: static;
-    --img-height: 60vh;
+    --img-height: 50vh;
+    scale: 1;
     transform: translate(-10%, -10vw) scale(1.2);
   }
   ${mediaQuery.mobileLandscape} {
@@ -54,7 +64,14 @@ export const bannerProductsImgCss = css`
 export const mainCss = css`
   display: flex;
   flex-direction: column;
+  height: fit-content;
+  width: 50%;
+  flex-shrink: 0;
+  ${mediaQuery.miniDesktop} {
+    width: 60%;
+  }
   ${mediaQuery.tablet} {
+    width: 100%;
     margin-bottom: var(--padding-page-mw);
   }
 `;
@@ -73,7 +90,6 @@ export const bannerHeaderCss = css`
 `;
 
 export const homeBannerBriefCss = css`
-  width: 40%;
   font-weight: 400;
   margin-bottom: var(--padding-normal);
   line-height: var(--line-height-small);
@@ -116,6 +132,7 @@ export const bannerCtaContainerCss = css`
 
 export const bannerCtaBtnCss = css`
   font-size: var(--font-size-small);
+  flex-shrink: 0;
   ${mediaQuery.tablet} {
     font-size: var(--font-size-default);
   }

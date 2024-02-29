@@ -8,15 +8,15 @@ import {
   bannerHeaderCss,
   bannerProductsImgCss,
   homeBannerBriefCss,
-  homeBannerContainerCss,
+  homeBannerWrapperCss,
   homeBannerImgCss,
-  mainCss
+  mainCss,
+  homeBannerContainerCss
 } from "@/modules/home-page/home-banner/styles";
 
 export default function HomePageBanner() {
   return (
-    <CompWrapper tag="div" wrapperStyles={homeBannerContainerCss}>
-      <ImageWrapper alt="-" src="/images/hero-products-dull.png" extraStyles={bannerProductsImgCss} />
+    <CompWrapper tag="div" wrapperStyles={homeBannerWrapperCss} innerElemExtraStyles={homeBannerContainerCss}>
       <ImageWrapper alt="home" src="/images/wallpaper.jpg" extraStyles={homeBannerImgCss}></ImageWrapper>
       <main css={mainCss}>
         <h1 css={bannerHeaderCss}>{companyName}</h1>
@@ -28,6 +28,7 @@ export default function HomePageBanner() {
           </LinkCtaBtn>
         </div>
       </main>
+      <ImageWrapper alt="-" src="/images/hero.png" extraStyles={bannerProductsImgCss} />
     </CompWrapper>
   );
 }

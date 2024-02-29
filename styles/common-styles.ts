@@ -19,7 +19,6 @@ export const commonPageContainerCss = css`
   display: flex;
   flex-direction: column;
   gap: var(--padding-normal);
-
   ${mediaQuery.mobileLandscape} {
     gap: var(--padding-mid);
   }
