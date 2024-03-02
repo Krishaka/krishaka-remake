@@ -19,8 +19,8 @@ export function Depodder(props: any) {
       ease: "none",
       scrollTrigger: {
         trigger: ".eg-sec-2",
-        start: "top center",
-        end: "bottom center",
+        start: "top top",
+        end: "bottom top",
         scrub: true,
         immediateRender: false
       }

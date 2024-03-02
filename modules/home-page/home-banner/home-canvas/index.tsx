@@ -11,11 +11,9 @@ import { commonHeaderCss } from "@/styles/common-styles";
 export default function HomeCanvas() {
   return (
     <div css={canvasWrapperCss}>
-      <CompWrapper tag="div" wrapperClassName="eg-sec-1 eg-sec">
-        <div css={featuredProductHeadingCss}>
-          <h3 css={commonHeaderCss("var(--color-font-default)")}>Featured Product</h3>
-          <h2 className="featured-product-name">Product Name</h2>
-        </div>
+      <CompWrapper tag="div" wrapperClassName="eg-sec-1 eg-sec" innerElemExtraStyles={featuredProductHeadingCss}>
+        <h3 css={commonHeaderCss("var(--color-font-default)")}>Featured Product</h3>
+        <h2 className="featured-product-name">Product Name</h2>
       </CompWrapper>
       <CompWrapper tag="div">
         <div className="eg-sec-2 eg-sec"></div>

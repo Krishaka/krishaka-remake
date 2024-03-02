@@ -2,15 +2,20 @@ import { css } from "@emotion/react";
 
 export const canvasWrapperCss = css`
   position: relative;
-  height: 265vh;
+  margin-top: var(--padding-page-dw);
+  height: 255vh;
+  --sec-height: 20vh;
   .eg-sec-1 {
-    position: sticky;
-    top: 0vh;
-    height: 30vh;
-    bottom: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 230vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
   .eg-sec-2 {
-    top: 30vh;
+    top: var(--sec-height);
     height: 100vh;
     position: absolute;
     width: 20vw;
@@ -34,9 +39,11 @@ export const canvasWrapperCss = css`
 `;
 
 export const featuredProductHeadingCss = css`
+  position: sticky;
+  top: 10vh;
   display: flex;
-  align-items: center;
-  gap: var(--padding-normal);
+  flex-direction: column;
+  height: var(--sec-height);
   .featured-product-name {
     color: var(--color-bg-secondary);
     font-weight: 400;
@@ -44,6 +51,7 @@ export const featuredProductHeadingCss = css`
     padding: var(--padding-small) var(--padding-mid);
     border-radius: var(--bor-rad-small);
     font-size: var(--font-size-small);
+    width: fit-content;
   }
 `;
 

@@ -8,8 +8,8 @@ export default function ThreeJsCanvas() {
     <Canvas css={canvasCss}>
       <ambientLight intensity={1} />
       {/* <OrbitControls /> */}
-      <TransformControls />
-      <axesHelper args={[5]} />
+      {/* <TransformControls /> */}
+      {/* <axesHelper args={[5]} /> */}
       <Environment preset="city" />
       <Depodder />
     </Canvas>
