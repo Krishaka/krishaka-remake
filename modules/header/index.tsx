@@ -4,7 +4,6 @@ import Link from "next/link";
 import CompWrapper from "@/components/comp-wrapper";
 import { useEffect, useRef } from "react";
 import Logo from "@/components/logo";
-import { SerializedStyles } from "@emotion/react";
 
 export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);

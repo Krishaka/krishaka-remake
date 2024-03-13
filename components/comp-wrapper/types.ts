@@ -6,6 +6,6 @@ export interface WrapperPropType {
   children: ReactNode;
   page?: string;
   wrapperStyles?: SerializedStyles;
-  innerElemExtraStyles?: SerializedStyles;
+  innerElemExtraStyles?: SerializedStyles | SerializedStyles[];
   wrapperClassName?: string;
 }

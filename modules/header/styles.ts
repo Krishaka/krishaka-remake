@@ -6,7 +6,7 @@ export const headerWrapperCss = css`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.3s ease;
   border-radius: 0 0 var(--bor-rad-normal) var(--bor-rad-normal);
   &.header-active {
@@ -58,7 +58,7 @@ export const hamburgerCss = css`
     .hamburger-lines {
       width: 100%;
       height: var(--hamburger-line-height);
-      background-color: white;
+      background-color: var(--color-text-default);
       border-radius: 1em;
       transition: all 0.3s ease;
       transform-origin: center;
