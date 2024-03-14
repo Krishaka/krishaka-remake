@@ -2,6 +2,7 @@ import { companyName } from "@/common-data";
 import ImageWrapper from "@/components/image-wrapper";
 import LinkCtaBtn from "@/components/link-cta-btn";
 import {
+  bgPatternCss,
   homeAboutBtnCss,
   homeAboutContainerCss,
   homeAboutDescCss,
@@ -21,6 +22,7 @@ export default function HomeAbout() {
           About Us
         </LinkCtaBtn>
       </div>
+      <ImageWrapper alt="pattern" src="/images/bg-pattern.png" extraStyles={bgPatternCss} />
     </div>
   );
 }

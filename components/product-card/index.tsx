@@ -1,6 +1,7 @@
 import ImageWrapper from "@/components/image-wrapper";
 import LinkCtaBtn from "@/components/link-cta-btn";
 import {
+  cardPatternCss,
   productCardBtnCss,
   productCardContainerCss,
   productCardDescCss,
@@ -24,6 +25,7 @@ export default function ProductCard(props: ProductCardProps) {
           {cardCtaText}
         </LinkCtaBtn>
       </div>
+      <ImageWrapper alt="pattern" src="/images/bg-pattern.png" extraStyles={cardPatternCss} />
     </div>
   );
 }

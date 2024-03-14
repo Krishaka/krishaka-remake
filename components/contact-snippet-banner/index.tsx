@@ -1,4 +1,5 @@
-import { ContactSnippetBannerCss } from "@/components/contact-snippet-banner/styles";
+import { ContactSnippetBannerCss, snippetPatternCss } from "@/components/contact-snippet-banner/styles";
+import ImageWrapper from "@/components/image-wrapper";
 import LinkCtaBtn from "@/components/link-cta-btn";
 
 export default function ContactSnippetBanner() {
@@ -9,6 +10,7 @@ export default function ContactSnippetBanner() {
         agriculture. Lets grow together!
       </p>
       <LinkCtaBtn link="contact">Contact Us</LinkCtaBtn>
+      <ImageWrapper alt="pattern" src="/images/bg-pattern.png" extraStyles={snippetPatternCss} />
     </div>
   );
 }

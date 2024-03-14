@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { MouseEventHandler, useEffect, useLayoutEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
@@ -6,48 +6,45 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export function DepodderHome(props: any) {
   const group = useRef();
+  const scaleRef = useRef<number>(2.85);
+  const posiRef = useRef<number[]>([2.05, -1.75, 0]);
   const { nodes, materials, animations } = useGLTF("/models/depodder-v1.glb");
   // const { actions } = useAnimations(animations, group);
   const { scene, camera } = useThree();
   const tl = gsap.timeline();
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
-    tl.to(scene.rotation, {
-      y: Math.PI * 2,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".home-canvas-section-2",
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        immediateRender: false,
-        markers: true
+  useEffect(() => {
+    const scrollHandler = () => {
+      if (window.scrollY > window.innerHeight && window.scrollY < 3 * window.innerHeight) {
+        scene.rotation.y = ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
       }
-    }).to(scene.position, {
-      x: 3.5,
-      z: 0.5,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".home-canvas-section-4",
-        start: "top center",
-        end: "bottom center",
-        scrub: 0.5,
-        immediateRender: false,
-        markers: true
-      }
-    });
-    return () => {
-      ScrollTrigger.killAll();
     };
-  });
+    const resizeHandler = () => {
+      if (window.innerWidth < 768) {
+        scaleRef.current = 1.5;
+        posiRef.current = [1, -1, 0];
+      }
+      if (window.innerWidth < 1280 && window.innerHeight > 768) {
+        scaleRef.current = 2.25;
+        posiRef.current = [1.45, -1.25, 0];
+      }
+    };
+    resizeHandler();
+    addEventListener("scroll", scrollHandler);
+    addEventListener("resize", resizeHandler);
+    return () => {
+      removeEventListener("scroll", scrollHandler);
+      removeEventListener("scroll", resizeHandler);
+    };
+  }, [scene]);
+
   return (
     <group
       ref={group}
       {...props}
       dispose={null}
-      scale={3}
-      position={[2.05, -1.75, 0]}
+      scale={scaleRef.current}
+      position={posiRef.current}
       rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
     >
       <group name="Scene">

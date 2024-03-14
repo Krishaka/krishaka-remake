@@ -8,6 +8,8 @@ export const productCardContainerCss = css`
   background-color: var(--color-bg-primary);
   border-radius: var(--bor-rad-small);
   gap: var(--padding-mid);
+  position: relative;
+  overflow: hidden;
   ${mediaQuery.miniDesktop} {
     width: 90%;
   }
@@ -37,6 +39,7 @@ export const productCardImgCss = css`
   border-radius: var(--bor-rad-small);
   overflow: hidden;
   flex-shrink: 0;
+  z-index: 1;
   img {
     object-fit: cover;
   }
@@ -61,6 +64,7 @@ export const productCardTextWrapperCss = css`
   display: flex;
   flex-direction: column;
   width: 100%;
+  z-index: 1;
   padding: 0 var(--padding-mid) var(--padding-mid) var(--padding-mid);
   ${mediaQuery.tablet} {
     padding: calc(var(--padding-small) + var(--scrollbar-width));
@@ -90,5 +94,16 @@ export const productCardBtnCss = css`
     border: 1px solid var(--color-text-default);
     color: var(--color-text-default);
     padding: var(--scrollbar-width) var(--padding-small);
+  }
+`;
+
+export const cardPatternCss = css`
+  position: absolute;
+  height: 150%;
+  aspect-ratio: 1;
+  z-index: 0;
+  opacity: 0.1;
+  img {
+    object-fit: contain;
   }
 `;
