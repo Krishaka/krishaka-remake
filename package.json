@@ -14,7 +14,6 @@
     "@react-three/fiber": "^8.15.16",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
-    "gsap": "^3.12.5",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",

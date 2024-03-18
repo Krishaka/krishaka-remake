@@ -1,42 +1,47 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export function DepodderProduct(props: any) {
   const group = useRef();
-  // const { actions } = useAnimations(animations, group);
+  const scaleRef = useRef<number>(2.85);
+  const posiRef = useRef<number[]>([2.05, -1.75, 0]);
+  const { nodes, materials, animations } = useGLTF("/models/depodder.glb");
   const { scene, camera } = useThree();
-  const tl = gsap.timeline();
-  const { nodes, materials, animations } = useGLTF("/models/depodder-v1.glb");
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
-    tl.to(scene.rotation, {
-      y: Math.PI * 2,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".product-canvas-section-big",
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-        immediateRender: false
+  useEffect(() => {
+    const scrollHandler = () => {
+      if (window.scrollY > 0 && window.scrollY < 2 * window.innerHeight) {
+        scene.rotation.y = ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
       }
-    });
-
-    return () => {
-      ScrollTrigger.killAll();
     };
-  });
+    const resizeHandler = () => {
+      if (window.innerWidth < 768) {
+        scaleRef.current = 1.5;
+        posiRef.current = [1, -1, 0];
+      }
+      if (window.innerWidth < 1280 && window.innerHeight > 768) {
+        scaleRef.current = 2.25;
+        posiRef.current = [1.45, -1.25, 0];
+      }
+    };
+    resizeHandler();
+    addEventListener("scroll", scrollHandler);
+    addEventListener("resize", resizeHandler);
+    return () => {
+      removeEventListener("scroll", scrollHandler);
+      removeEventListener("scroll", resizeHandler);
+    };
+  }, [scene]);
+
   return (
     <group
       ref={group}
       {...props}
       dispose={null}
-      scale={3}
+      scale={scaleRef.current}
+      position={posiRef.current}
       rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
-      position={[2.05, -1.75, 0]}
     >
       <group name="Scene">
         <group name="Empty" position={[-0.007, 0.654, 0.719]} />
@@ -117,4 +122,4 @@ export function DepodderProduct(props: any) {
   );
 }
 
-useGLTF.preload("/models/depodder-v1.glb");
+useGLTF.preload("/models/depodder.glb");

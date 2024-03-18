@@ -9,11 +9,11 @@ import {
 } from "react-icons/bs";
 
 export const companyName = "Krishaka";
-export const companyTagLine = "A company that aspires to bring a change!";
+export const companyTagLine = "Where farming meets technology!";
 export const companyMail = "something@gmail.com";
 export const companyNumber = "+91-9999999999";
 export const companyBrief =
-  "An innovative force in agriculture, standing at the forefront of revolutionizing the farming landscape with its cutting-edge products.";
+  "An Agritech Startup which aims to turn farming a Lucrative industry by integrating technology into the farming.";
 
 export const navList = [
   {

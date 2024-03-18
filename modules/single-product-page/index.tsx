@@ -1,6 +1,7 @@
 import CompWrapper from "@/components/comp-wrapper";
 import ContactSnippetBanner from "@/components/contact-snippet-banner";
 import ProductCanvas from "@/modules/single-product-page/product-canvas";
+import ProductFeatures from "@/modules/single-product-page/product-features";
 import ProductLinksSnippet from "@/modules/single-product-page/product-links-snippet";
 import { productNameHeaderCss } from "@/modules/single-product-page/styles";
 import { commonHeaderCss, commonPageContainerCss, commonPageWrapperCss } from "@/styles/common-styles";
@@ -8,11 +9,11 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function SingleProductModule() {
-  // const [pageName, setPageName] = useState<string>("");
-  // const router = useRouter();
-  // useEffect(() => {
-  //   setPageName((router.query.product as string).replace("-", " "));
-  // }, [router]);
+  const [pageName, setPageName] = useState<string>("");
+  const router = useRouter();
+  useEffect(() => {
+    setPageName((router.query.product as string).replace("-", " "));
+  }, [router]);
 
   return (
     <CompWrapper
@@ -23,7 +24,8 @@ export default function SingleProductModule() {
       innerElemExtraStyles={commonPageContainerCss}
     >
       <h1 css={[commonHeaderCss("var(--color-bg-secondary)"), productNameHeaderCss]}>Product One</h1>
-      <ProductCanvas />
+      <ProductCanvas productName={pageName} />
+      <ProductFeatures />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quos iure, exercitationem atque numquam autem
         corporis, rem odit quis a fuga vero, quidem cumque amet voluptatibus possimus vel praesentium qui maiores ullam
@@ -40,7 +42,7 @@ export default function SingleProductModule() {
         Error doloremque magni fugit voluptate odit voluptatibus possimus unde rerum, provident ut doloribus, modi, cum
         officiis quam id veritatis repellendus dolor neque!
       </p>
-      {/* <ProductLinksSnippet pageName="Product One" /> */}
+      <ProductLinksSnippet pageName={pageName} />
       <ContactSnippetBanner />
     </CompWrapper>
   );

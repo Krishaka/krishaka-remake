@@ -1,17 +1,14 @@
-import React, { MouseEventHandler, useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export function DepodderHome(props: any) {
   const group = useRef();
   const scaleRef = useRef<number>(2.85);
   const posiRef = useRef<number[]>([2.05, -1.75, 0]);
-  const { nodes, materials, animations } = useGLTF("/models/depodder-v1.glb");
+  const { nodes, materials, animations } = useGLTF("/models/depodder.glb");
   // const { actions } = useAnimations(animations, group);
-  const { scene, camera } = useThree();
-  const tl = gsap.timeline();
+  const { scene } = useThree();
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -126,4 +123,4 @@ export function DepodderHome(props: any) {
   );
 }
 
-useGLTF.preload("/models/depodder-v1.glb");
+useGLTF.preload("/models/depodder.glb");

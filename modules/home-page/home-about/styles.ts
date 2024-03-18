@@ -23,6 +23,7 @@ export const homeAboutImgCss = css`
   border-radius: var(--bor-rad-small);
   overflow: hidden;
   flex-shrink: 0;
+  z-index: 1;
   img {
     object-fit: cover;
   }
