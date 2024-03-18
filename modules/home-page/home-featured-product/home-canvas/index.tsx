@@ -9,7 +9,7 @@ export default function HomeCanvas() {
       <ambientLight intensity={1} />
       {/* <OrbitControls /> */}
       <TransformControls />
-      <axesHelper args={[5]} />
+      {/* <axesHelper args={[5]} /> */}
       <Environment preset="city" />
       <DepodderHome />
     </Canvas>
