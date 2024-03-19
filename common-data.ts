@@ -29,6 +29,10 @@ export const navList = [
     link: "/products"
   },
   {
+    navItemName: "team",
+    link: "/team"
+  },
+  {
     navItemName: "contact",
     link: "/contact"
   }

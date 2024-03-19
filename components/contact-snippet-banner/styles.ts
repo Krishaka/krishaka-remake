@@ -24,6 +24,10 @@ export const ContactSnippetBannerCss = css`
   }
 `;
 
+export const contactSnippetDescCss = css`
+text-align: center;
+`
+
 export const snippetPatternCss = css`
   position: absolute;
   height: 200%;

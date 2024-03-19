@@ -14,13 +14,27 @@ export const carousalWrapperCss = css`
   ${mediaQuery.miniDesktop} {
     justify-content: center;
   }
+  ${mediaQuery.tablet} {
+    position: relative;
+  }
 `;
 
 export const carousalArrowCss = css`
   font-size: var(--padding-normal);
   cursor: pointer;
+  ${mediaQuery.tablet} {
+    position: absolute;
+    z-index: 2;
+    color: var(--color-bg-secondary);
+    &:nth-of-type(1) {
+      left: var(--padding-small);
+    }
+    &:nth-of-type(2) {
+      right: var(--padding-small);
+    }
+  }
   ${mediaQuery.mobile} {
-    font-size: var(--font-size-icon);
+    font-size: calc(1.5 * var(--padding-mid));
   }
   &.arrow-inactive {
     cursor: not-allowed;

@@ -16,12 +16,8 @@ export const carousalContainerCss = css`
     }
   }
   ${mediaQuery.tablet} {
-    width: 60vw;
-    margin: 0 var(--padding-small);
-  }
-  ${mediaQuery.mobile} {
-    width: 70vw;
-    margin: 0 var(--scrollbar-width);
+    width: 100%;
+    margin: 0;
   }
   ${mediaQuery.mobileLandscape} {
     width: 90vw;
@@ -37,5 +33,8 @@ export const carousalTrackCss = (colNum: number) => css`
   margin-bottom: var(--padding-normal);
   ${mediaQuery.miniDesktop} {
     --items-on-screen: 1;
+  }
+  ${mediaQuery.tablet} {
+    margin-bottom: 0;
   }
 `;

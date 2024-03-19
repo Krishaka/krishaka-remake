@@ -15,6 +15,7 @@ export const productCardContainerCss = css`
   }
   ${mediaQuery.tablet} {
     gap: var(--scrollbar-width);
+    width: 100%;
   }
 
   ${mediaQuery.mobile} {

@@ -30,11 +30,11 @@ export const headerCss = css`
 
 export const hamburgerCss = css`
   ${mediaQuery.tablet} {
-    --nav-height: 17.5px;
-    --nav-width: 30px;
+    --hamburger-height: 17.5px;
+    --hamburger-width: 30px;
     --hamburger-line-height: 2px;
-    height: var(--nav-height);
-    width: var(--nav-width);
+    height: var(--hamburger-height);
+    width: var(--hamburger-width);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,7 +82,7 @@ export const navCss = css`
   align-items: center;
   gap: 5vw;
   ${mediaQuery.tablet} {
-    --nav-height: 275px;
+    --nav-height: 60vh;
     position: absolute;
     gap: 0;
     height: var(--nav-height);
