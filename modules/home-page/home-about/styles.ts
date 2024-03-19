@@ -66,7 +66,7 @@ export const bgPatternCss = css`
   height: 200%;
   aspect-ratio: 1;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.2;
   filter: grayscale(1) invert(1);
   img {
     object-fit: contain;

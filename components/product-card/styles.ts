@@ -91,10 +91,7 @@ export const productCardBtnCss = css`
     align-self: center;
   }
   ${mediaQuery.mobile} {
-    background-color: transparent;
-    border: 1px solid var(--color-text-default);
-    color: var(--color-text-default);
-    padding: var(--scrollbar-width) var(--padding-small);
+    margin-top: var(--padding-mid);
   }
 `;
 

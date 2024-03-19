@@ -5,6 +5,7 @@ export const productLinksSnippetWrapperCss = css`
   display: flex;
   flex-direction: column;
   gap: var(--padding-normal);
+  margin: var(--padding-page-dw) 0;
   ${mediaQuery.mobile} {
     gap: var(--bor-rad-normal);
     margin-bottom: var(--padding-normal);

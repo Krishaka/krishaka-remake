@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 
 export function DepodderHome(props: any) {
   const group = useRef();
-  const scaleRef = useRef<number>(2.85);
-  const posiRef = useRef<number[]>([2.05, -1.75, 0]);
+  const [scaleNum, setScaleNum] = useState<number>(2.85);
+  const [posNum, setPosNum] = useState<number[]>([2.05, -1.75, 0]);
   const { nodes, materials, animations } = useGLTF("/models/depodder.glb");
   // const { actions } = useAnimations(animations, group);
   const { scene } = useThree();
@@ -17,13 +17,9 @@ export function DepodderHome(props: any) {
       }
     };
     const resizeHandler = () => {
-      if (window.innerWidth < 768) {
-        scaleRef.current = 1.5;
-        posiRef.current = [1, -1, 0];
-      }
-      if (window.innerWidth < 1280 && window.innerHeight > 768) {
-        scaleRef.current = 2.25;
-        posiRef.current = [1.45, -1.25, 0];
+      if (window.innerWidth < 1280) {
+        setScaleNum(1.5);
+        setPosNum([1, -1, 0]);
       }
     };
     resizeHandler();
@@ -40,8 +36,8 @@ export function DepodderHome(props: any) {
       ref={group}
       {...props}
       dispose={null}
-      scale={scaleRef.current}
-      position={posiRef.current}
+      scale={scaleNum}
+      position={posNum}
       rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
     >
       <group name="Scene">

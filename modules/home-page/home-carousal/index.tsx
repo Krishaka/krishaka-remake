@@ -36,10 +36,8 @@ export default function HomeCarousal() {
         const classAdder = (itemClassName: string, arrow: ChildNode | HTMLDivElement | null | undefined) => {
           if (entries[0].target.classList.contains(itemClassName)) {
             (arrow as HTMLDivElement).classList.add("arrow-inactive");
-            console.log("first");
           } else {
             (arrow as HTMLDivElement).classList.remove("arrow-inactive");
-            console.log("first++");
           }
         };
         classAdder("product-item-0", leftArrow);

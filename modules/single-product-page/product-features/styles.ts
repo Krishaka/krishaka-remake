@@ -7,6 +7,10 @@ export const featuresWrapperCss = css`
   gap: var(--padding-page-mw);
 `;
 
+export const headingColorCss = css`
+  color: var(--color-bg-secondary);
+`;
+
 export const featuresContainerCss = css`
   --col-num: 4;
   display: grid;
@@ -29,6 +33,10 @@ export const featureItemCss = css`
   align-items: center;
   justify-content: center;
   gap: var(--padding-mid);
+  ${mediaQuery.tablet} {
+    padding: calc(1.5 * var(--padding-small));
+    gap: var(--padding-small);
+  }
 `;
 
 export const featureTitleCss = css`
@@ -39,7 +47,7 @@ export const featureTitleCss = css`
 export const featureImgCss = css`
   width: 80%;
   aspect-ratio: 1;
-  max-width: calc(6 * var(--padding-normal));
+  max-width: calc(3.5 * var(--padding-normal));
   filter: contrast(0.5);
   img {
     object-fit: contain;

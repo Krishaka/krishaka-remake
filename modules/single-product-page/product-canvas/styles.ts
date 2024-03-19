@@ -9,8 +9,5 @@ export const productCanvasContainerCss = css`
   height: 100vh;
   width: 100%;
   position: sticky;
-  top: 20%;
-  canvas {
-    transform: translateY(-20%);
-  }
+  top: 0;
 `;

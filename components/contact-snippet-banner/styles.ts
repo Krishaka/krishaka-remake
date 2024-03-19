@@ -35,7 +35,7 @@ export const snippetPatternCss = css`
   top: -55%;
   left: -5%;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.2;
   filter: grayscale(1) invert(1);
   img {
     object-fit: contain;

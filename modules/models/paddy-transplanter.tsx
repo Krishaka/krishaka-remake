@@ -1,11 +1,11 @@
 import { useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function PaddyTransplanter(props: any) {
   const group = useRef();
-  const scaleRef = useRef<number>(0.225);
-  const posiRef = useRef<number[]>([1.25, -0.75, 1.25]);
+  const [scaleNum, setScaleNum] = useState<number>(0.225);
+  const [posNum, setPosNum] = useState<number[]>([1.25, -0.75, 1.25]);
   const { scene } = useThree();
 
   useEffect(() => {
@@ -15,9 +15,9 @@ export function PaddyTransplanter(props: any) {
       }
     };
     const resizeHandler = () => {
-      if (window.innerWidth < 768) {
-        scaleRef.current = 0.15;
-        posiRef.current = [1, -0.5, 1];
+      if (window.innerWidth < 1280) {
+        setScaleNum(0.15);
+        setPosNum([1, -0.5, 1]);
       }
     };
     resizeHandler();
@@ -34,8 +34,8 @@ export function PaddyTransplanter(props: any) {
       {...props}
       dispose={null}
       ref={group}
-      scale={scaleRef.current}
-      position={posiRef.current}
+      scale={scaleNum}
+      position={posNum}
       rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
     >
       <mesh

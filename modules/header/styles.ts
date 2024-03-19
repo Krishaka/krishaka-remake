@@ -6,7 +6,7 @@ export const headerWrapperCss = css`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   transition: all 0.3s ease;
   border-radius: 0 0 var(--bor-rad-normal) var(--bor-rad-normal);
   &.header-active {

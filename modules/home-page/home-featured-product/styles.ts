@@ -64,6 +64,9 @@ export const featuredProdDescWrapperCss = css`
   ${mediaQuery.miniDesktop} {
     top: 80vh;
   }
+  ${mediaQuery.tablet} {
+    top: 70vh;
+  }
 `;
 
 export const featuredProdDescContainerCss = css`
@@ -73,6 +76,12 @@ export const featuredProdDescContainerCss = css`
   ${mediaQuery.desktop} {
     .feat-prod-desc {
       width: 40%;
+    }
+  }
+  ${mediaQuery.tablet} {
+    gap: var(--padding-small);
+    .feat-prod-desc {
+      line-height: var(--padding-mid);
     }
   }
 `;

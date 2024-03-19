@@ -5,8 +5,10 @@ import {
   featureItemCss,
   featureTitleCss,
   featuresContainerCss,
-  featuresWrapperCss
+  featuresWrapperCss,
+  headingColorCss
 } from "@/modules/single-product-page/product-features/styles";
+import { productsLinksSnippetHeaderCss } from "@/modules/single-product-page/product-links-snippet/styles";
 import { commonHeaderCss } from "@/styles/common-styles";
 
 export default function ProductFeatures() {
@@ -24,7 +26,7 @@ export default function ProductFeatures() {
   };
   return (
     <div css={featuresWrapperCss}>
-      <h2 css={commonHeaderCss("var(--color-bg-secondary)")}>Product Features</h2>
+      <h2 css={[productsLinksSnippetHeaderCss, headingColorCss]}>Product Features</h2>
       <div css={featuresContainerCss}>{Array(4).fill({}).map(featuresMapper)}</div>
     </div>
   );

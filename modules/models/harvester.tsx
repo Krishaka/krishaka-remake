@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 
 export default function Harvester(props: any) {
   const group = useRef();
-  const scaleRef = useRef<number>(2.5);
-  const posiRef = useRef<number[]>([1.85, -1.25, 0]);
+  const [scaleNum, setScaleNum] = useState<number>(2.5);
+  const [posNum, setPosNum] = useState<number[]>([1.85, -1.25, 0]);
   const { scene } = useThree();
   useEffect(() => {
     const scrollHandler = () => {
@@ -15,10 +15,8 @@ export default function Harvester(props: any) {
     };
     const resizeHandler = () => {
       if (window.innerWidth < 1280) {
-        scaleRef.current = 1.5;
-        console.log("first++");
-
-        posiRef.current = [1.25, -0.75, 0];
+        setScaleNum(1.5);
+        setPosNum([1.25, -0.75, 0]);
       }
     };
     resizeHandler();
@@ -35,8 +33,8 @@ export default function Harvester(props: any) {
       {...props}
       dispose={null}
       ref={group}
-      scale={scaleRef.current}
-      position={posiRef.current}
+      scale={scaleNum}
+      position={posNum}
       rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
     >
       <mesh

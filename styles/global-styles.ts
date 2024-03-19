@@ -66,4 +66,7 @@ export const globalStylesCss = css`
     border-radius: var(--bor-rad-normal);
     background-color: var(--color-text-default);
   }
+  p {
+    line-height: var(--line-height-large);
+  }
 `;
