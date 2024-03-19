@@ -11,6 +11,5 @@ export const productCanvasContainerCss = css`
   top: 0;
   ${mediaQuery.tablet} {
     width: 90vw;
-    overflow-x: hidden;
   }
 `;

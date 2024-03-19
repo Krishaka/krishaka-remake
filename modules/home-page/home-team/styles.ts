@@ -15,6 +15,7 @@ export const homeTeamWrapperCss = css`
 export const teamMembersContainerCss = css`
   --grid-col: 3;
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(var(--grid-col), 1fr);
   gap: var(--padding-normal);
   ${mediaQuery.miniDesktop} {
