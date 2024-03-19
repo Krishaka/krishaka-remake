@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useAnimations } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 
 export function DepodderProduct(props: any) {
   const group = useRef();
   const [scaleNum, setScaleNum] = useState<number>(2.85);
   const [posNum, setPosNum] = useState<number[]>([2.05, -1.75, 0]);
-  const { nodes, materials } = useGLTF("/models/depodder.glb");
+  const { nodes, materials, animations } = useGLTF("/models/depodder.glb");
   const { scene } = useThree();
 
   useEffect(() => {

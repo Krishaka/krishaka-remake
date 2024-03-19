@@ -1,3 +1,4 @@
+import { mediaQuery } from "@/styles/media-query";
 import { css } from "@emotion/react";
 
 export const productScrollContainerCss = css`
@@ -6,8 +7,10 @@ export const productScrollContainerCss = css`
 `;
 
 export const productCanvasContainerCss = css`
-  height: 100vh;
-  width: 100%;
   position: sticky;
   top: 0;
+  ${mediaQuery.tablet} {
+    width: 90vw;
+    overflow-x: hidden;
+  }
 `;

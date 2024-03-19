@@ -14,4 +14,10 @@ export const productDescContainerCss = css`
   display: flex;
   flex-direction: column;
   gap: var(--padding-mid);
+  .prod-page-desc {
+    ${mediaQuery.tablet} {
+      text-align: justify;
+      height: auto;
+    }
+  }
 `;

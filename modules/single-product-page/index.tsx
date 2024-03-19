@@ -30,7 +30,7 @@ export default function SingleProductModule() {
       <ProductFeatures />
       <div css={productDescContainerCss}>
         <h3 css={[productsLinksSnippetHeaderCss, headingColorCss]}>About Product Name</h3>
-        <p>
+        <p className="prod-page-desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quos iure, exercitationem atque numquam autem
           corporis, rem odit quis a fuga vero, quidem cumque amet voluptatibus possimus vel praesentium qui maiores
           ullam quaerat veritatis aperiam aspernatur! Amet eos fugiat alias reprehenderit odio excepturi. Saepe suscipit

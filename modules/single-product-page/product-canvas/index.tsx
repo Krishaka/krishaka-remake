@@ -9,7 +9,7 @@ import {
 import { ProductProps } from "@/modules/single-product-page/product-canvas/types";
 import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ProductCanvas(props: ProductProps) {
   const { productName } = props;
@@ -18,16 +18,12 @@ export default function ProductCanvas(props: ProductProps) {
   useEffect(() => {
     setProduct(productName);
   }, [productName]);
-
-  console.log(productName);
   return (
     <div>
       <div css={productCanvasContainerCss}>
         <Canvas css={canvasCss}>
           <ambientLight intensity={1} />
-          <Suspense fallback={null}>
-            <Environment preset="city" />
-          </Suspense>
+          <Environment preset="city" />
           {product === "product one" && <DepodderProduct />}
           {product === "product two" && <PaddyTransplanter />}
           {product === "product three" && <Harvester />}
