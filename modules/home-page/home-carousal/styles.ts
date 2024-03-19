@@ -25,7 +25,9 @@ export const carousalArrowCss = css`
   ${mediaQuery.tablet} {
     position: absolute;
     z-index: 2;
+    top: 35%;
     color: var(--color-bg-secondary);
+
     &:nth-of-type(1) {
       left: var(--padding-small);
     }

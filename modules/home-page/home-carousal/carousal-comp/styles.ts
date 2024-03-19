@@ -36,5 +36,9 @@ export const carousalTrackCss = (colNum: number) => css`
   }
   ${mediaQuery.tablet} {
     margin-bottom: 0;
+    scroll-snap-type: x mandatory;
+    .product-item {
+      scroll-snap-align: start;
+    }
   }
 `;

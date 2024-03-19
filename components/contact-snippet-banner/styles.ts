@@ -25,8 +25,8 @@ export const ContactSnippetBannerCss = css`
 `;
 
 export const contactSnippetDescCss = css`
-text-align: center;
-`
+  text-align: center;
+`;
 
 export const snippetPatternCss = css`
   position: absolute;
@@ -35,7 +35,8 @@ export const snippetPatternCss = css`
   top: -55%;
   left: -5%;
   z-index: 0;
-  opacity: 0.5;
+  opacity: 0.4;
+  filter: grayscale(1) invert(1);
   img {
     object-fit: contain;
   }
