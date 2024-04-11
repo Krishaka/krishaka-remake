@@ -92,6 +92,7 @@ export const productCardBtnCss = css`
   }
   ${mediaQuery.mobile} {
     margin-top: var(--padding-mid);
+    margin-bottom: var(--padding-small);
   }
 `;
 
@@ -100,7 +101,8 @@ export const cardPatternCss = css`
   height: 150%;
   aspect-ratio: 1;
   z-index: 0;
-  opacity: 0.1;
+  opacity: 0.25;
+  filter: grayscale(1) invert(1);
   img {
     object-fit: contain;
   }

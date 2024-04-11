@@ -6,37 +6,32 @@ import {
   canvasContainerCss,
   canvasWrapperCss,
   featureProdHeadingCss,
-  featuredProdContainerCss,
   featuredProdDescContainerCss,
-  featuredProdDescWrapperCss,
-  featuredProdInfoWrapperCss,
   featuredProdNameCss
 } from "@/modules/home-page/home-featured-product/styles";
 import { commonHeaderCss } from "@/styles/common-styles";
 
 export default function HomeFeaturedProduct() {
   return (
-    <div css={canvasWrapperCss}>
-      <CompWrapper tag="div" innerElemExtraStyles={featuredProdContainerCss} wrapperStyles={featuredProdInfoWrapperCss}>
-        <div css={featureProdHeadingCss}>
-          <h3 css={commonHeaderCss("var(--color-font-default)")}>Featured Product</h3>
-          <h2 css={featuredProdNameCss}>Product Name</h2>
+    <>
+      <div css={canvasWrapperCss}>
+        <CompWrapper tag="div">
+          <div css={featureProdHeadingCss}>
+            <h3 css={commonHeaderCss("var(--color-font-default)")}>Featured Product</h3>
+            <h2 css={featuredProdNameCss}>Product Name</h2>
+          </div>
+        </CompWrapper>
+        <div css={canvasContainerCss}>
+          <HomeCanvas />
         </div>
-      </CompWrapper>
-      <div css={canvasContainerCss}>
-        <HomeCanvas />
       </div>
-      <CompWrapper
-        tag="div"
-        wrapperStyles={featuredProdDescWrapperCss}
-        innerElemExtraStyles={featuredProdDescContainerCss}
-      >
+      <CompWrapper tag="div" innerElemExtraStyles={featuredProdDescContainerCss}>
         <p className="feat-prod-desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolorum autem porro quo quae rem placeat
           incidunt commodi, aspernatur vitae vel illo error voluptatum aliquid?
         </p>
         <LinkCtaBtn link="products/product-one">View Product</LinkCtaBtn>
       </CompWrapper>
-    </div>
+    </>
   );
 }

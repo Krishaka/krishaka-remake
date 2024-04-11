@@ -4,30 +4,13 @@ import { css } from "@emotion/react";
 export const canvasWrapperCss = css`
   position: relative;
   margin-top: var(--padding-page-dw);
-  height: 300vh;
-  margin-bottom: var(--padding-page-mw);
-`;
-
-export const featuredProdInfoWrapperCss = css`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 200vh;
-`;
-
-export const featuredProdContainerCss = css`
-  height: 100%;
 `;
 
 export const featureProdHeadingCss = css`
   display: flex;
   flex-direction: column;
-  position: sticky;
   top: var(--padding-page-dw);
-  ${mediaQuery.desktop} {
-    top: 20vh;
-  }
 `;
 
 export const featuredProdNameCss = css`
@@ -56,16 +39,9 @@ export const canvasContainerCss = css`
       transform: translateX(20%);
     }
   }
-`;
-
-export const featuredProdDescWrapperCss = css`
-  position: sticky;
-  top: 70vh;
-  ${mediaQuery.miniDesktop} {
-    top: 80vh;
-  }
   ${mediaQuery.tablet} {
-    top: 70vh;
+    height: 65vh;
+    top: 20vh;
   }
 `;
 
@@ -73,6 +49,8 @@ export const featuredProdDescContainerCss = css`
   display: flex;
   flex-direction: column;
   gap: var(--padding-mid);
+  margin-bottom: var(--padding-page-mw);
+
   ${mediaQuery.desktop} {
     .feat-prod-desc {
       width: 40%;

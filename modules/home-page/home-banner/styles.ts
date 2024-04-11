@@ -116,6 +116,7 @@ export const bannerCtaContainerCss = css`
   }
   ${mediaQuery.tablet} {
     flex-direction: column;
+    gap: var(--bor-rad-small);
     .cta-info {
       text-align: center;
       font-size: var(--font-size-small);
@@ -130,13 +131,59 @@ export const bannerCtaContainerCss = css`
   }
 `;
 
-export const bannerCtaBtnCss = css`
-  font-size: var(--font-size-small);
-  flex-shrink: 0;
-  ${mediaQuery.tablet} {
-    font-size: var(--font-size-default);
+export const spanContainerStyle = css`
+  height: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+`;
+
+export const spanStyle = css`
+  display: block;
+  font-weight: 700;
+  min-height: 100%;
+  font-size: calc(2 * var(--font-size-default));
+  width: 100%;
+  display: flex;
+  letter-spacing: 0.1em;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  animation: slide-up 10s ease-in-out infinite;
+  animation-fill-mode: backwards;
+  @keyframes slide-up {
+    0% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-100%);
+    }
+    40% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(-200%);
+    }
+    65% {
+      transform: translateY(-200%);
+    }
+    75% {
+      transform: translateY(-300%);
+    }
+    90% {
+      transform: translateY(-300%);
+    }
+    100% {
+      transform: translateY(-400%);
+    }
   }
-  ${mediaQuery.mobileLandscape} {
-    transform: scale(0.6);
+  ${mediaQuery.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-icon);
   }
 `;

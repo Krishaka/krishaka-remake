@@ -5,18 +5,18 @@ import { useThree } from "@react-three/fiber";
 export default function Harvester(props: any) {
   const group = useRef();
   const [scaleNum, setScaleNum] = useState<number>(2.5);
-  const [posNum, setPosNum] = useState<number[]>([1.85, -1.25, 0]);
+  const [posNum, setPosNum] = useState<number[]>([0.75, -0.5, 0]);
   const { scene } = useThree();
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY > 0 && window.scrollY < 2 * window.innerHeight) {
-        scene.rotation.y = ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
+        scene.rotation.y = -Math.PI + ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
       }
     };
     const resizeHandler = () => {
       if (window.innerWidth < 1280) {
-        setScaleNum(1.5);
-        setPosNum([1.25, -0.75, 0]);
+        setScaleNum(1.8);
+        setPosNum([0.5, 0, 0]);
       }
     };
     resizeHandler();

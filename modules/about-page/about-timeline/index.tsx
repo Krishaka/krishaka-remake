@@ -22,11 +22,16 @@ export default function AboutTimeline() {
       threshold: 0.9
     };
 
-    const obvCallback: IntersectionObserverCallback = (events) => {
-      for (const event of events) {
-        const { target } = event;
+    const obvCallback: IntersectionObserverCallback = (entries) => {
+      for (const entry of entries) {
+        const { boundingClientRect, target } = entry;
+        const { top, height } = boundingClientRect;
         const checkpoint = target.previousSibling;
-        if (event.isIntersecting) {
+        if (top >= innerHeight - height) {
+          target?.classList.remove("item-active");
+          (checkpoint as HTMLSpanElement).classList.remove("checkpoint-active");
+        }
+        if (entry.isIntersecting) {
           target.classList.add("item-active");
           (checkpoint as HTMLSpanElement).classList.add("checkpoint-active");
         }

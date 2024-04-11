@@ -8,6 +8,8 @@ export default function HomeCanvas() {
     <Canvas css={canvasCss}>
       <ambientLight intensity={1} />
       <Environment preset="city" />
+      <TransformControls />
+      <OrbitControls />
       <DepodderHome />
     </Canvas>
   );

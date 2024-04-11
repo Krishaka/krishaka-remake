@@ -11,7 +11,7 @@ export default function HomePageModule() {
   return (
     <>
       <HomePageBanner />
-      <HomeFeaturedProduct />
+      {/* <HomeFeaturedProduct /> */}
       <CompWrapper
         page="Home"
         tag="div"

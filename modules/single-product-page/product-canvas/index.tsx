@@ -19,7 +19,7 @@ export default function ProductCanvas(props: ProductProps) {
     setProduct(productName);
   }, [productName]);
   return (
-    <div>
+    <div css={productScrollContainerCss}>
       <div css={productCanvasContainerCss}>
         <Canvas css={canvasCss}>
           <ambientLight intensity={1} />
@@ -29,7 +29,6 @@ export default function ProductCanvas(props: ProductProps) {
           {product === "product three" && <Harvester />}
         </Canvas>
       </div>
-      <div css={productScrollContainerCss}></div>
     </div>
   );
 }

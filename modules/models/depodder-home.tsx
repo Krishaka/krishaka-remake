@@ -12,14 +12,14 @@ export function DepodderHome(props: any) {
 
   useEffect(() => {
     const scrollHandler = () => {
-      if (window.scrollY > window.innerHeight && window.scrollY < 3 * window.innerHeight) {
-        scene.rotation.y = ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
+      if (window.scrollY > window.innerHeight && window.scrollY < 2 * window.innerHeight) {
+        scene.rotation.y = ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 4;
       }
     };
     const resizeHandler = () => {
       if (window.innerWidth < 1280) {
-        setScaleNum(1.5);
-        setPosNum([1, -1, 0]);
+        setScaleNum(2.5);
+        setPosNum([1.75, -1.5, 0]);
       }
     };
     resizeHandler();

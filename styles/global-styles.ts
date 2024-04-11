@@ -32,10 +32,11 @@ export const globalStylesCss = css`
     --line-height-large: calc(var(--scrollbar-width) + var(--padding-mid));
     --carosual-mid-width: 500px;
 
+    --color-bg: #001900;
     --color-bg-primary: #1d892c;
+    /* --color-bg-primary: #c3e2c2; */
     --color-bg-secondary: #ffd93d;
     --color-bg-primary-light: rgb(94, 184, 129);
-    --color-bg: #061e06;
     --color-nav-bg: rgba(29, 137, 44, 0.4);
     --color-off-gray: hsla(0, 0%, 63%, 0.25);
     --color-light-gray: rgba(62, 62, 62, 0.4);

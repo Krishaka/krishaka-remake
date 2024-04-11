@@ -7,6 +7,9 @@ export const teamMemberCardCss = css`
   color: inherit;
   padding: var(--padding-mid);
   border-radius: var(--bor-rad-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   ${mediaQuery.mobile} {
     border-radius: var(--bor-rad-small);
     padding: var(--padding-mid) 0;
@@ -18,27 +21,17 @@ export const teamMemberCardCss = css`
   }
 `;
 
-export const memberImgWrapperCss = css`
-  --img-size: 12.5vw;
-  rotate: 45deg;
-  margin: var(--padding-normal);
+export const memberProfileImgCss = css`
+  --img-size: 15vw;
+  border-radius: 50%;
+  overflow: hidden;
   width: var(--img-size);
   aspect-ratio: 1;
-  border-radius: var(--bor-rad-small);
-  overflow: hidden;
+  img {
+    object-fit: cover;
+  }
   ${mediaQuery.miniDesktop} {
     --img-size: 150px;
-  }
-`;
-
-export const memberProfileImgCss = css`
-  height: 100%;
-  width: 100%;
-  scale: 1.4;
-  display: flex;
-  img {
-    rotate: -45deg;
-    object-fit: cover;
   }
 `;
 
@@ -71,7 +64,7 @@ export const memberInfoContainerCss = css`
 export const memberSocialsWrapperCss = css`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   .member-social-link {
     text-decoration: none;
     color: var(--color-bg-secondary);

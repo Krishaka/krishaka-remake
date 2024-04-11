@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 export function PaddyTransplanter(props: any) {
   const group = useRef();
   const [scaleNum, setScaleNum] = useState<number>(0.225);
-  const [posNum, setPosNum] = useState<number[]>([1.25, -0.75, 1.25]);
   const { scene } = useThree();
 
   useEffect(() => {
@@ -16,8 +15,7 @@ export function PaddyTransplanter(props: any) {
     };
     const resizeHandler = () => {
       if (window.innerWidth < 1280) {
-        setScaleNum(0.15);
-        setPosNum([1, -0.5, 1]);
+        setScaleNum(0.175);
       }
     };
     resizeHandler();
@@ -30,14 +28,7 @@ export function PaddyTransplanter(props: any) {
   }, [scene]);
   const { nodes, materials } = useGLTF("/models/paddy-transplanter.glb");
   return (
-    <group
-      {...props}
-      dispose={null}
-      ref={group}
-      scale={scaleNum}
-      position={posNum}
-      rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
-    >
+    <group {...props} dispose={null} ref={group} scale={scaleNum} rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}>
       <mesh
         geometry={(nodes.paddy_transplanter as THREE.Mesh).geometry}
         material={materials.PaletteMaterial001}

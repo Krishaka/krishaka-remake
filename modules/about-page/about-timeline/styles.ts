@@ -30,7 +30,7 @@ export const tlGraphWrapperCss = css`
   }
   ${mediaQuery.mobile} {
     &::before {
-      width: 2px;
+      width: var(--scrollbar-width);
       height: 80%;
     }
   }
@@ -72,20 +72,18 @@ export const tlItemCss = css`
 export const tlCheckpointCss = css`
   height: var(--line-height-large);
   aspect-ratio: 1;
-  border-radius: var(--scrollbar-width);
-  transform: rotate(45deg);
+  border-radius: 50%;
   background-color: var(--color-text-default);
   transition: all 0.15s ease;
   margin-top: var(--padding-mid);
   ${mediaQuery.tablet} {
     position: absolute;
     height: calc(var(--bor-rad-small) + var(--scrollbar-width));
-    border-radius: 0;
     left: 0;
-    transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%);
   }
   ${mediaQuery.mobile} {
-    height: var(--bor-rad-small);
+    height: var(--padding-mid);
   }
   &.checkpoint-active {
     background-color: var(--color-bg-secondary);
@@ -114,7 +112,7 @@ export const tlInfoWrapperCss = css`
   ${mediaQuery.mobile} {
     padding: var(--bor-rad-small);
     --card-width: 93%;
-    transform: translateX(calc(var(--scrollbar-width) + var(--bor-rad-small)));
+    transform: translateX(var(--padding-mid));
   }
   &.item-active {
     opacity: 1;

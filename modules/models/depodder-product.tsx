@@ -12,13 +12,13 @@ export function DepodderProduct(props: any) {
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY > 0 && window.scrollY < 2 * window.innerHeight) {
-        scene.rotation.y = ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
+        scene.rotation.y = -Math.PI * 1 + ((scrollY - window.innerHeight) / (2 * window.innerHeight)) * Math.PI * 2;
       }
     };
     const resizeHandler = () => {
       if (window.innerWidth < 1280) {
-        setScaleNum(1.5);
-        setPosNum([1, -1, 0]);
+        setScaleNum(2.5);
+        setPosNum([1.75, -1.5, 0]);
       }
     };
     resizeHandler();
@@ -37,7 +37,7 @@ export function DepodderProduct(props: any) {
       dispose={null}
       scale={scaleNum}
       position={posNum}
-      rotation={[-Math.PI, -Math.PI * 0.5, -Math.PI]}
+      rotation={[-Math.PI, -Math.PI * 0.5, Math.PI]}
     >
       <group name="Scene">
         <group name="Empty" position={[-0.007, 0.654, 0.719]} />
