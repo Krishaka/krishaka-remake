@@ -10,8 +10,8 @@ import {
 
 export const companyName = "Krishaka";
 export const companyTagLine = "Where farming meets technology!";
-export const companyMail = "something@gmail.com";
-export const companyNumber = "+91-9999999999";
+export const companyMail = "mpavoperations@gmail.com";
+export const companyNumber = "+91-9840046978";
 export const companyBrief =
   "An Agritech Startup which aims to turn farming a Lucrative industry by integrating technology into the farming.";
 
@@ -88,7 +88,7 @@ export const contactInfoList = [
   {
     iconName: "location",
     Icon: BsGeoAltFill,
-    text: "Flat No XYZ, Locality ABC, Chennai - 62, IN",
+    text: "Nirmaan, Sudha Sankar Innovation Home, IIT Madras, Chennai, 600036",
     link: "https://maps.app.goo.gl/eU4qyhhoG6f8bFdH6"
   }
 ];
