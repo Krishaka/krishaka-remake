@@ -5,7 +5,7 @@ import {
   BsGeoAltFill,
   BsInstagram,
   BsLinkedin,
-  BsTwitter
+  BsTwitter,
 } from "react-icons/bs";
 
 export const companyName = "Krishaka";
@@ -18,24 +18,24 @@ export const companyBrief =
 export const navList = [
   {
     navItemName: "home",
-    link: "/"
+    link: "/",
   },
   {
     navItemName: "about",
-    link: `/about`
+    link: `/about`,
   },
   {
     navItemName: "products",
-    link: "/products"
+    link: "/products",
   },
   {
     navItemName: "team",
-    link: "/team"
+    link: "/team",
   },
   {
     navItemName: "contact",
-    link: "/contact"
-  }
+    link: "/contact",
+  },
 ];
 
 export const productList = [
@@ -45,7 +45,7 @@ export const productList = [
     productDesc:
       "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
       Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability."
+      agriculture, and sustainability.",
   },
   {
     productName: "product two",
@@ -53,7 +53,7 @@ export const productList = [
     productDesc:
       "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
       Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability."
+      agriculture, and sustainability.",
   },
   {
     productName: "product three",
@@ -61,15 +61,15 @@ export const productList = [
     productDesc:
       "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
       Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability."
-  }
+      agriculture, and sustainability.",
+  },
 ];
 
 export const socialIconsList = [
   { iconName: "instagram", Icon: BsInstagram, link: "/" },
   { iconName: "facebook", Icon: BsFacebook, link: "/" },
   { iconName: "twitter", Icon: BsTwitter, link: "/" },
-  { iconName: "linkedIn", Icon: BsLinkedin, link: "/" }
+  { iconName: "linkedIn", Icon: BsLinkedin, link: "/" },
 ];
 
 export const contactInfoList = [
@@ -77,20 +77,20 @@ export const contactInfoList = [
     iconName: "mail",
     Icon: BsEnvelope,
     text: companyMail,
-    link: `mailto:${companyMail}`
+    link: `mailto:${companyMail}`,
   },
   {
     iconName: "phone",
     Icon: BsFillTelephoneFill,
     text: companyNumber,
-    link: `tel:${companyNumber}`
+    link: `tel:${companyNumber}`,
   },
   {
     iconName: "location",
     Icon: BsGeoAltFill,
     text: "Nirmaan, Sudha Sankar Innovation Home, IIT Madras, Chennai, 600036",
-    link: "https://maps.app.goo.gl/eU4qyhhoG6f8bFdH6"
-  }
+    link: "https://maps.app.goo.gl/Ygxiev8kasDtmjDYA",
+  },
 ];
 
 export const teamData = [
@@ -100,7 +100,7 @@ export const teamData = [
     imageUrl: "/images/wallpaper.jpg",
     link: "https://www.linkedin.com/feed/",
     insta: "https://www.instagram.com/",
-    mail: companyMail
+    mail: companyMail,
   },
   {
     name: "Swami Suresh",
@@ -108,7 +108,7 @@ export const teamData = [
     imageUrl: "/images/wallpaper.jpg",
     link: "https://www.linkedin.com/feed/",
     insta: "https://www.instagram.com/",
-    mail: companyMail
+    mail: companyMail,
   },
   {
     name: "Manoj Mahesh",
@@ -116,6 +116,6 @@ export const teamData = [
     imageUrl: "/images/wallpaper.jpg",
     link: "https://www.linkedin.com/feed/",
     insta: "https://www.instagram.com/",
-    mail: companyMail
-  }
+    mail: companyMail,
+  },
 ];
