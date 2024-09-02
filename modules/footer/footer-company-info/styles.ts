@@ -39,6 +39,6 @@ export const footerSocialsHeaderCss = css`
 export const footerSocialsWrapperCss = css`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 24px;
   max-width: 300px;
 `;

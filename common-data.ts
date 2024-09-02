@@ -66,10 +66,8 @@ export const productList = [
 ];
 
 export const socialIconsList = [
-  { iconName: "instagram", Icon: BsInstagram, link: "/" },
-  { iconName: "facebook", Icon: BsFacebook, link: "/" },
-  { iconName: "twitter", Icon: BsTwitter, link: "/" },
-  { iconName: "linkedIn", Icon: BsLinkedin, link: "/" },
+  { iconName: "instagram", Icon: BsInstagram, link: "https://www.instagram.com/krishaka_agrow/" },
+  { iconName: "linkedIn", Icon: BsLinkedin, link: "https://www.linkedin.com/in/krishaka-agrow-268735294/" },
 ];
 
 export const contactInfoList = [
