@@ -5,37 +5,37 @@ import {
   BsGeoAltFill,
   BsInstagram,
   BsLinkedin,
-  BsTwitter
+  BsTwitter,
 } from "react-icons/bs";
 
 export const companyName = "Krishaka";
 export const companyTagLine = "Where farming meets technology!";
-export const companyMail = "something@gmail.com";
-export const companyNumber = "+91-9999999999";
+export const companyMail = "mpavoperations@gmail.com";
+export const companyNumber = "+91-9840046978";
 export const companyBrief =
   "An Agritech Startup which aims to turn farming a Lucrative industry by integrating technology into the farming.";
 
 export const navList = [
   {
     navItemName: "home",
-    link: "/"
+    link: "/",
   },
   {
     navItemName: "about",
-    link: `/about`
+    link: `/about`,
   },
   {
     navItemName: "products",
-    link: "/products"
+    link: "/products",
   },
   {
     navItemName: "team",
-    link: "/team"
+    link: "/team",
   },
   {
     navItemName: "contact",
-    link: "/contact"
-  }
+    link: "/contact",
+  },
 ];
 
 export const productList = [
@@ -45,7 +45,7 @@ export const productList = [
     productDesc:
       "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
       Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability."
+      agriculture, and sustainability.",
   },
   {
     productName: "product two",
@@ -53,7 +53,7 @@ export const productList = [
     productDesc:
       "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
       Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability."
+      agriculture, and sustainability.",
   },
   {
     productName: "product three",
@@ -61,15 +61,13 @@ export const productList = [
     productDesc:
       "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
       Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability."
-  }
+      agriculture, and sustainability.",
+  },
 ];
 
 export const socialIconsList = [
-  { iconName: "instagram", Icon: BsInstagram, link: "/" },
-  { iconName: "facebook", Icon: BsFacebook, link: "/" },
-  { iconName: "twitter", Icon: BsTwitter, link: "/" },
-  { iconName: "linkedIn", Icon: BsLinkedin, link: "/" }
+  { iconName: "instagram", Icon: BsInstagram, link: "https://www.instagram.com/krishaka_agrow/" },
+  { iconName: "linkedIn", Icon: BsLinkedin, link: "https://www.linkedin.com/in/krishaka-agrow-268735294/" },
 ];
 
 export const contactInfoList = [
@@ -77,20 +75,20 @@ export const contactInfoList = [
     iconName: "mail",
     Icon: BsEnvelope,
     text: companyMail,
-    link: `mailto:${companyMail}`
+    link: `mailto:${companyMail}`,
   },
   {
     iconName: "phone",
     Icon: BsFillTelephoneFill,
     text: companyNumber,
-    link: `tel:${companyNumber}`
+    link: `tel:${companyNumber}`,
   },
   {
     iconName: "location",
     Icon: BsGeoAltFill,
-    text: "Flat No XYZ, Locality ABC, Chennai - 62, IN",
-    link: "https://maps.app.goo.gl/eU4qyhhoG6f8bFdH6"
-  }
+    text: "Nirmaan, Sudha Sankar Innovation Home, IIT Madras, Chennai, 600036",
+    link: "https://maps.app.goo.gl/Ygxiev8kasDtmjDYA",
+  },
 ];
 
 export const teamData = [
@@ -100,7 +98,7 @@ export const teamData = [
     imageUrl: "/images/wallpaper.jpg",
     link: "https://www.linkedin.com/feed/",
     insta: "https://www.instagram.com/",
-    mail: companyMail
+    mail: companyMail,
   },
   {
     name: "Swami Suresh",
@@ -108,7 +106,7 @@ export const teamData = [
     imageUrl: "/images/wallpaper.jpg",
     link: "https://www.linkedin.com/feed/",
     insta: "https://www.instagram.com/",
-    mail: companyMail
+    mail: companyMail,
   },
   {
     name: "Manoj Mahesh",
@@ -116,6 +114,6 @@ export const teamData = [
     imageUrl: "/images/wallpaper.jpg",
     link: "https://www.linkedin.com/feed/",
     insta: "https://www.instagram.com/",
-    mail: companyMail
-  }
+    mail: companyMail,
+  },
 ];
