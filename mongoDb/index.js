@@ -1,1 +1,0 @@
-mongodb+srv://krishaka:krishaka@221B@cluster0.bunkv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
