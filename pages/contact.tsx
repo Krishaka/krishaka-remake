@@ -1,5 +1,5 @@
-import TeamPageModule from "@/modules/team-page";
+import ContactPageModule from "@/modules/contact-page";
 
 export default function Team() {
-  return <TeamPageModule />;
+  return <ContactPageModule/>
 }
