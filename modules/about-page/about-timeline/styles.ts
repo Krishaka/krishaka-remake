@@ -62,7 +62,7 @@ export const tlItemCss = css`
         align-items: flex-start;
         left: calc(2 * var(--padding-mid));
         .tl-item-desc {
-          text-align: left;
+          text-align: right;
         }
       }
     }
