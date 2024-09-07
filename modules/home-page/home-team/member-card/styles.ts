@@ -12,7 +12,7 @@ export const teamMemberCardCss = css`
   align-items: center;
   ${mediaQuery.mobile} {
     border-radius: var(--bor-rad-small);
-    padding: var(--padding-mid) 0;
+    padding: var(--padding-mid);
   }
   ${mediaQuery.mobileLandscape} {
     display: flex;
@@ -65,6 +65,7 @@ export const memberSocialsWrapperCss = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 25px;
   .member-social-link {
     text-decoration: none;
     color: var(--color-bg-secondary);
