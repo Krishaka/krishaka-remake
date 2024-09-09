@@ -110,16 +110,15 @@ export const teamData = [
   },
   {
     name: "G . Sri Venkatesh",
-    position: "Production Team",
+    position: "Production Design",
     imageUrl: "/images/blank-photo.png",
     link: "https://www.linkedin.com/in/g-sri-venkatesh-618905249/",
-    insta:
-      "https://www.instagram.com/gsv.2099",
+    insta: "https://www.instagram.com/gsv.2099",
     mail: companyMail,
   },
   {
-    name: "Manoj Mahesh",
-    position: "Cheif Technical Officer",
+    name: "Bala Saimani V",
+    position: "Product Manager",
     imageUrl: "/images/bala-sai.png",
     link: "https://www.linkedin.com/in/bala-saimani-voonna-52491a25a/",
     insta: "https://www.instagram.com/vbalasai_09",
@@ -130,26 +129,31 @@ export const AboutTimelineData = [
   {
     title: "Founding of Krishaka",
     date: "January 2022",
-    description: "Krishaka was established with the mission to transform small-scale farming through affordable automation. We began with a focus on developing solutions tailored to address labor shortages and rising operational costs faced by small-scale farmers.",
+    description:
+      "Krishaka was established with the mission to transform small-scale farming through affordable automation. We began with a focus on developing solutions tailored to address labor shortages and rising operational costs faced by small-scale farmers.",
   },
   {
     title: "First Prototype Completed",
     date: "June 2022",
-    description: "Developed and completed the first working prototype of the paddy transplanter. This marked a significant step in demonstrating the feasibility of using low-power automation for small-scale farming tasks.",
+    description:
+      "Developed and completed the first working prototype of the paddy transplanter. This marked a significant step in demonstrating the feasibility of using low-power automation for small-scale farming tasks.",
   },
   {
     title: "Field Testing & Iteration",
     date: "September 2022",
-    description: "Conducted initial field testing of the paddy transplanter in different soil conditions. Feedback from farmers was gathered, leading to design improvements and performance optimization.",
+    description:
+      "Conducted initial field testing of the paddy transplanter in different soil conditions. Feedback from farmers was gathered, leading to design improvements and performance optimization.",
   },
   {
     title: "Nirmaan Pre-Incubation Support",
     date: "January 2023",
-    description: "Joined IIT Madras’s Nirmaan Pre-Incubation Program, gaining access to mentorship, field contacts for testing, basic prototyping funding, and special talks from industry veterans.",
+    description:
+      "Joined IIT Madras’s Nirmaan Pre-Incubation Program, gaining access to mentorship, field contacts for testing, basic prototyping funding, and special talks from industry veterans.",
   },
   {
     title: "Market Launch",
     date: "October 2023",
-    description: "Officially launched Krishaka's products, offering machines for rental and sale. Expanded market reach through partnerships with FPOs and agricultural businesses, marking our entry into the commercial market.",
-  }
+    description:
+      "Officially launched Krishaka's products, offering machines for rental and sale. Expanded market reach through partnerships with FPOs and agricultural businesses, marking our entry into the commercial market.",
+  },
 ];
