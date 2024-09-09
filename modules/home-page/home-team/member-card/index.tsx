@@ -41,7 +41,7 @@ export default function MemberCard(prop: (typeof teamData)[0]) {
           <BsLinkedin />
         </Link>
         <Link
-          href={mail}
+          href={`mailto:${mail}`}
           className="member-social-link"
           title={name + "'s mail"}
         >

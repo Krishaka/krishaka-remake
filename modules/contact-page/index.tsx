@@ -21,6 +21,7 @@ export default function ContactPageModule() {
   const [errors, setErrors] = useState({
     name: '',
     email: '',
+    phone: '',
   });
 
   const handleChange = (
@@ -37,7 +38,7 @@ export default function ContactPageModule() {
 
     // Simple validation
     let valid = true;
-    let newErrors = { name: '', email: '' };
+    let newErrors = { name: '', email: '', phone: '' };
 
     if (!formData.name) {
       newErrors.name = 'Name is required';
@@ -45,6 +46,10 @@ export default function ContactPageModule() {
     }
     if (!formData.email) {
       newErrors.email = 'Email is required';
+      valid = false;
+    }
+    if (!formData.phone) {
+      newErrors.phone = 'Phone is required';
       valid = false;
     }
 
@@ -119,7 +124,9 @@ export default function ContactPageModule() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              required
             />
+            {errors.phone && <p>{errors.phone}</p>}
           </div>
           <div>
             <label htmlFor="query">Query:</label>
