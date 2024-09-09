@@ -102,7 +102,7 @@ export const contactInfoList = [
 export const teamData = [
   {
     name: "Easwar V",
-    position: "CEO",
+    position: "Founder & CEO",
     imageUrl: "/images/easwar.jpg",
     link: "https://www.linkedin.com/in/easwar-veeragandham-132367194/",
     insta: "https://www.instagram.com/easwar_v",
@@ -110,7 +110,7 @@ export const teamData = [
   },
   {
     name: "G . Sri Venkatesh",
-    position: "Production Design",
+    position: "Product Design",
     imageUrl: "/images/blank-photo.png",
     link: "https://www.linkedin.com/in/g-sri-venkatesh-618905249/",
     insta: "https://www.instagram.com/gsv.2099",
@@ -122,6 +122,14 @@ export const teamData = [
     imageUrl: "/images/bala-sai.png",
     link: "https://www.linkedin.com/in/bala-saimani-voonna-52491a25a/",
     insta: "https://www.instagram.com/vbalasai_09",
+    mail: companyMail,
+  },
+  {
+    name: "Nandamuri Saketh",
+    position: "Software Lead",
+    imageUrl: "/images/blank-photo.png",
+    link: "https://www.linkedin.com/feed/",
+    insta: "https://www.instagram.com/",
     mail: companyMail,
   },
 ];
