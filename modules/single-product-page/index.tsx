@@ -14,8 +14,10 @@ export default function SingleProductModule() {
   const [pageName, setPageName] = useState<string>("");
   const router = useRouter();
   useEffect(() => {
-    setPageName((router.query.product as string).replace("-", " "));
-  }, [router]);
+    if (router.isReady){
+      setPageName((router.query.product as string).replace("-", " "));
+    }
+  }, [router.isReady,router]);
 
   return (
     <CompWrapper
