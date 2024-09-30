@@ -94,7 +94,7 @@ export const contactInfoList = [
   {
     iconName: "location",
     Icon: BsGeoAltFill,
-    text: "Nirmaan, Sudha Sankar Innovation Home, IIT Madras, Chennai, 600036",
+    text: "Nirmaan, Sudha Sankar Innovation Hub, IIT Madras, Chennai, 600036",
     link: "https://maps.app.goo.gl/Ygxiev8kasDtmjDYA",
   },
 ];
@@ -109,19 +109,19 @@ export const teamData = [
     mail: companyMail,
   },
   {
-    name: "G . Sri Venkatesh",
-    position: "Product Design",
-    imageUrl: "/images/blank-photo.png",
-    link: "https://www.linkedin.com/in/g-sri-venkatesh-618905249/",
-    insta: "https://www.instagram.com/gsv.2099",
-    mail: companyMail,
-  },
-  {
     name: "Bala Saimani V",
     position: "Product Manager",
     imageUrl: "/images/bala-sai.png",
     link: "https://www.linkedin.com/in/bala-saimani-voonna-52491a25a/",
     insta: "https://www.instagram.com/vbalasai_09",
+    mail: companyMail,
+  },
+  {
+    name: "Sri Venkatesh",
+    position: "Product Design",
+    imageUrl: "/images/blank-photo.png",
+    link: "https://www.linkedin.com/in/g-sri-venkatesh-618905249/",
+    insta: "https://www.instagram.com/gsv.2099",
     mail: companyMail,
   },
   {
