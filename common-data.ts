@@ -165,3 +165,5 @@ export const AboutTimelineData = [
       "Officially launched Krishaka's products, offering machines for rental and sale. Expanded market reach through partnerships with FPOs and agricultural businesses, marking our entry into the commercial market.",
   },
 ];
+
+export const formLinkForJob = "https://forms.gle/moP36qiQH9Vpxx3Z8";

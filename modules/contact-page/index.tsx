@@ -1,27 +1,30 @@
-import { useState } from 'react';
-import CompWrapper from '@/components/comp-wrapper';
+import { useState } from "react";
+import CompWrapper from "@/components/comp-wrapper";
+import Link from "next/link";
 import {
   commonHeaderCss,
   commonPageContainerCss,
   commonPageWrapperCss,
-} from '@/styles/common-styles';
+} from "@/styles/common-styles";
 import {
   contactPageWrapperCss,
   formWrapperCss,
-} from '@/modules/contact-page/styles';
+  joinButtonCss,
+} from "@/modules/contact-page/styles";
+import { formLinkForJob } from "@/common-data";
 
 export default function ContactPageModule() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    query: '',
+    name: "",
+    email: "",
+    phone: "",
+    query: "",
   });
 
   const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    name: "",
+    email: "",
+    phone: "",
   });
 
   const handleChange = (
@@ -38,18 +41,18 @@ export default function ContactPageModule() {
 
     // Simple validation
     let valid = true;
-    let newErrors = { name: '', email: '', phone: '' };
+    let newErrors = { name: "", email: "", phone: "" };
 
     if (!formData.name) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
       valid = false;
     }
     if (!formData.email) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
       valid = false;
     }
     if (!formData.phone) {
-      newErrors.phone = 'Phone is required';
+      newErrors.phone = "Phone is required";
       valid = false;
     }
 
@@ -57,10 +60,10 @@ export default function ContactPageModule() {
 
     if (valid) {
       try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
+        const response = await fetch("/api/contact", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
@@ -69,14 +72,14 @@ export default function ContactPageModule() {
 
         if (response.ok) {
           alert(result.message);
-          setFormData({ name: '', email: '', phone: '', query: '' });
+          setFormData({ name: "", email: "", phone: "", query: "" });
         } else {
-          console.error('Error:', result.message);
-          alert('Failed to submit the form.');
+          console.error("Error:", result.message);
+          alert("Failed to submit the form.");
         }
       } catch (error) {
-        console.error('Error:', error);
-        alert('An unexpected error occurred.');
+        console.error("Error:", error);
+        alert("An unexpected error occurred.");
       }
     }
   };
@@ -90,6 +93,12 @@ export default function ContactPageModule() {
       innerElemExtraStyles={commonPageContainerCss}
     >
       <h1 css={commonHeaderCss()}>Contact Us</h1>
+      <div>
+        <Link href={formLinkForJob} passHref={true}>
+          <button css={joinButtonCss}>Join Us</button>
+        </Link>
+      </div>
+      <hr />
       <div css={contactPageWrapperCss}>
         <form onSubmit={handleSubmit} css={formWrapperCss}>
           <div>

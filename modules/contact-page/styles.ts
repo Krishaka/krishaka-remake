@@ -70,3 +70,31 @@ export const formWrapperCss = css`
     margin-top: var(--padding-small);
   }
 `;
+export const joinButtonCss = css`
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-default);
+  border: none;
+  border-radius: 50px;
+  font-size: var(--font-size-default);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-dark);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-bg-primary);
+  }
+`;
