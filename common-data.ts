@@ -40,28 +40,28 @@ export const navList = [
 
 export const productList = [
   {
-    productName: "product one",
-    productImg: "/images/wallpaper.jpg",
+    productName: "Groundnut Thresher",
+    productImg: "/images/goundnut_thrusher.jpeg",
     productDesc:
-      "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
-      Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability.",
+      "This specialized agricultural machine is designed to efficiently separate groundnuts from their vines and shells and by automating this process, this facilitates the rapid processing of groundnut harvests and significantly reduces the labor required for manual threshing.",
+    productPageDesc:
+      "Our groundnut thresher drastically improves the threshing process by cutting the time to around 5 hours per acre, offering an 80% reduction in labor. Unlike traditional methods, there is no need for crops to dry before threshing, allowing efficient operation even during rainy conditions. With a 96% efficiency rate, this machine guarantees superior performance, saving time and resources",
   },
   {
-    productName: "product two",
-    productImg: "/images/wallpaper.jpg",
+    productName: "Groundnut Harvester",
+    productImg: "/images/groundnut_harvester.jpeg",
     productDesc:
-      "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
-      Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability.",
+      "Specialized machine designed to efficiently harvest groundnuts (peanuts) from the soil. It digs up the crop, separates the pods from the soil, and clears away excess dirt, making the harvesting process faster and more effective. ",
+    productPageDesc:
+      "Our groundnut harvester presents the best in delicate harvesting. Capable of uprooting an acre's worth of groundnut plants in just 3 hours, it achieves a remarkable 98.75% reduction in time. Its design ensures minimal disturbance to the pods, gently lifting the plants without separating the groundnuts from the soil, preserving crop integrity and quality.",
   },
   {
-    productName: "product three",
-    productImg: "/images/wallpaper.jpg",
+    productName: "Paddy Transplante",
+    productImg: "/images/paddy_transplanter.jpeg",
     productDesc:
-      "Krishaka, an agritech trailblazer, pioneers farming innovation with cutting-edge vehicles.\
-      Specializing in smart farming solutions, Krishaka integrates advanced technology, precision\
-      agriculture, and sustainability.",
+      "The Paddy transplanter which streamlines the labor-intensive process of planting paddy rice by automating the transplantation of seedlings ensuring uniform planting depth and spacing, and ultimately boosts crop yields",
+    productPageDesc:
+      "Our paddy transplanter makes the planting process by significantly reducing time and labor. With this advanced machine, farmers can plant an acre of paddy in just 2.5 hours, marking an impressive 97.6% reduction in time compared to traditional methods. Its superior design ensures better output and user-friendliness, planting each seedling at a precise 90-degree angle and a depth of 8 cm for optimal growth. Furthermore, the transplanter supports crops of various lengths, unlike other companies’ machines that may impose size restrictions. Powered by an electric vehicle (EV) mechanism, the transplanter offers extremely low maintenance costs and precise control over steering and spacing, enhancing operational efficiency",
   },
 ];
 

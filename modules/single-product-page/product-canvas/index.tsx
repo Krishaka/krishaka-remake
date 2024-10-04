@@ -24,9 +24,9 @@ export default function ProductCanvas(props: ProductProps) {
         <Canvas css={canvasCss}>
           <ambientLight intensity={1} />
           <Environment preset="city" />
-          {product === "product one" && <DepodderProduct />}
-          {product === "product two" && <PaddyTransplanter />}
-          {product === "product three" && <Harvester />}
+          {product === "Groundnut Thresher" && <DepodderProduct />}
+          {product === "Paddy Transplante" && <PaddyTransplanter />}
+          {product === "Groundnut Harvester" && <Harvester />}
         </Canvas>
       </div>
     </div>

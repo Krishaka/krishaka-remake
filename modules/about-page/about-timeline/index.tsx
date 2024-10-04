@@ -69,7 +69,6 @@ export default function AboutTimeline() {
       </div>
     );
   };
-  console.log(AboutTimelineData);
   return (
     <div css={tlWrapperCss}>
       <h2 css={commonHeaderCss("var(--color-bg-secondary)")}>Timeline</h2>
