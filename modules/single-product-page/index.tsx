@@ -27,8 +27,8 @@ export default function SingleProductModule() {
     }
   }, [router.isReady, router]);
   const product = productList.find((element) => {
-    return element.productName == pageName
-  })
+    return element.productName == pageName;
+  });
   return (
     <CompWrapper
       tag="div"
@@ -51,8 +51,7 @@ export default function SingleProductModule() {
         <h3 css={[productsLinksSnippetHeaderCss, headingColorCss]}>
           About {pageName}
         </h3>
-        <p className="prod-page-desc">{product && <p className="prod-page-desc">{product.productPageDesc}</p>}
-</p>
+        {product && <p className="prod-page-desc">{product.productPageDesc}</p>}
       </div>
       <ProductLinksSnippet pageName={pageName} />
       <ContactSnippetBanner />

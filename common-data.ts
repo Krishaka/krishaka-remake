@@ -103,7 +103,7 @@ export const teamData = [
   {
     name: "Easwar V",
     position: "Founder & CEO",
-    imageUrl: "/images/easwar.jpg",
+    imageUrl: "/images/easwar.jpeg",
     link: "https://www.linkedin.com/in/easwar-veeragandham-132367194/",
     insta: "https://www.instagram.com/easwar_v",
     mail: companyMail,
