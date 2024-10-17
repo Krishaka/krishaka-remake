@@ -154,15 +154,9 @@ export const AboutTimelineData = [
   },
   {
     title: "Nirmaan Pre-Incubation Support",
-    date: "January 2023",
+    date: "September 2022",
     description:
       "Joined IIT Madras’s Nirmaan Pre-Incubation Program, gaining access to mentorship, field contacts for testing, basic prototyping funding, and special talks from industry veterans.",
-  },
-  {
-    title: "Market Launch",
-    date: "October 2023",
-    description:
-      "Officially launched Krishaka's products, offering machines for rental and sale. Expanded market reach through partnerships with FPOs and agricultural businesses, marking our entry into the commercial market.",
   },
 ];
 
