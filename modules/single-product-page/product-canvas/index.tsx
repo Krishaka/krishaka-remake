@@ -4,7 +4,7 @@ import Harvester from "@/modules/models/harvester";
 import { PaddyTransplanter } from "@/modules/models/paddy-transplanter";
 import {
   productCanvasContainerCss,
-  productScrollContainerCss
+  productScrollContainerCss,
 } from "@/modules/single-product-page/product-canvas/styles";
 import { ProductProps } from "@/modules/single-product-page/product-canvas/types";
 import { Environment } from "@react-three/drei";
@@ -24,13 +24,8 @@ export default function ProductCanvas(props: ProductProps) {
         <Canvas css={canvasCss}>
           <ambientLight intensity={1} />
           <Environment preset="city" />
-<<<<<<< HEAD
-          {product === "Groundnut Thresher" && <DepodderProduct />}
-          {product === "Paddy Transplante" && <PaddyTransplanter />}
-=======
           {product === "Groundnut thresher" && <DepodderProduct />}
           {product === "Paddy transplanter" && <PaddyTransplanter />}
->>>>>>> branch1
           {product === "Groundnut Harvester" && <Harvester />}
         </Canvas>
       </div>
